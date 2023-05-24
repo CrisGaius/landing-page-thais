@@ -1,0 +1,137 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap'); /*Fonte Forum*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); /*Fonte Open Sans*/
+
+/* Declaração de variáveis para as fontes e cores da página */
+:root { 
+    --preto: #000000;
+    --preto-acinzentado: #252422;
+    --laranja: #EB5E28;
+    --forum: 'Forum', cursive;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+/* Tirando as estilizações padrões que os navegadores fazem, colocando a fonte padrão do projeto, colocando o comportamento suave ao clicar em um link  */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: var(--open-sans);
+    scroll-behavior: smooth;
+}
+
+/* Estilização da barra de navegação do site */
+nav#navbar {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px 15px 15px;
+}
+
+/* Estilização para o link com o nome da cliente */
+nav#navbar a#titulo-menu {
+    color: white;
+    font-family: var(--forum);
+    font-size: 1.3em;
+}
+
+/* Projeto de animação ao passar por cima do nome da cliente */
+nav#navbar a.animado:hover {
+    color: #FAFAFA;
+    animation: bg 4s infinite;
+}
+
+@keyframes bg {
+    50% {
+        color: #0069D9;
+    }
+}
+
+/* Estilização dos elementos da página que encontram-se no menu */
+div#elementos {
+    display: flex;
+    gap: 20px;
+    font-family: var(--open-sans);
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Estilização dos links da página que encontram-se no menu */
+div#elementos a {
+    color: white;
+    font-size: .9em;
+
+}
+
+/* Estilização dos links da página que encontram-se no menu [ao passar o mouse] */
+div#elementos a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização do botão do menu */
+div#elementos button#btn-contato {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 8px 10px 8px 10px;
+    border: none;
+    font-family: var(--open-sans);
+    font-size: .9em;
+    font-weight: bold;
+    margin: auto;
+}
+
+/* Estilização do botão do menu [ao passar o mouse por cima] */
+div#elementos button#btn-contato:hover {
+    opacity: .9;
+}
+
+/* Estilização da sessão com a imagem de thaís de fundo. */
+section#imagem {
+    background-color: var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* Estilização da imagem da sessão de fato */
+section#imagem img {
+    width: 100%;
+    height: 500px;
+    opacity: 0.5;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Definindo position absolute para que os textos fiquem à frente da imagem */
+div#textos-imagem {
+    position: absolute;
+}
+
+/* Estilização da frase motivacional */
+div#textos-imagem h1{
+    color: var(--laranja);
+    font-size: 3em;
+    font-weight: 700px;
+}
+
+/* Delimitação da caixa que contém o paragráfo que fica abaixo da frase motivacional */
+div#caixa-paragrafo {
+    width: 390px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* Estilização do parágrafo abaixo da frase motivacional de fato */
+div#textos-imagem p {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.600);
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+    font-weight: 500;
+}
