@@ -56,22 +56,19 @@ nav#navbar a.gradiente:hover {
 
 @keyframes bg {
     0% {
-        color: #FF005F;
-    }
-
-    25% {
         color: #DD01E3;
     }
-    
+
     50% {
         color: #FE0076;
     }
+
     75% {
         color: #FFC23B;
     }
 
     100% {
-        color: #FF005F;
+        color: #DD01E3;
     }
 }
 
