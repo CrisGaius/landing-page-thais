@@ -4,9 +4,9 @@
 
 /* Declaração de variáveis para as fontes e cores da página */
 :root { 
-    --preto: #000000;
-    --preto-acinzentado: #252422;
+    --preto-acinzentando: #121211;
     --laranja: #EB5E28;
+    --dourado: #F6BF73;
     --forum: 'Forum', cursive;
     --open-sans: 'Open Sans', sans-serif;
 }
@@ -22,9 +22,13 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--preto-acinzentando);
+}
+
 /* Estilização da barra de navegação do site */
 nav#navbar {
-    background-color: #000000;
+    background-color: var(--preto-acinzentando);
     color: white;
     display: flex;
     align-items: center;
@@ -40,14 +44,34 @@ nav#navbar a#titulo-menu {
 }
 
 /* Projeto de animação ao passar por cima do nome da cliente */
-nav#navbar a.animado:hover {
-    color: #FAFAFA;
-    animation: bg 4s infinite;
+nav#navbar a.gradiente:hover {
+    color: #DD01E3;
+    /* background-image: linear-gradient(to bottom, #DD01E3, #FE0076, #FFC23B);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white; */
+    animation: bg 3s infinite;
 }
 
 @keyframes bg {
+    0% {
+        color: #FF005F;
+    }
+
+    25% {
+        color: #DD01E3;
+    }
+    
     50% {
-        color: #0069D9;
+        color: #FE0076;
+    }
+    75% {
+        color: #FFC23B;
+    }
+
+    100% {
+        color: #FF005F;
     }
 }
 
@@ -82,16 +106,19 @@ div#elementos button#btn-contato {
     font-size: .9em;
     font-weight: bold;
     margin: auto;
+    color: black;
+    background-color: white;
 }
 
 /* Estilização do botão do menu [ao passar o mouse por cima] */
 div#elementos button#btn-contato:hover {
-    opacity: .9;
+    scale: 1.05;
+    transition: all 0.15s ease-in-out;
 }
 
 /* Estilização da sessão com a imagem de thaís de fundo. */
 section#imagem {
-    background-color: var(--preto);
+    background-color: var(--preto-acinzentando);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +129,6 @@ section#imagem {
 /* Estilização da imagem da sessão de fato */
 section#imagem img {
     width: 100%;
-    height: 500px;
     opacity: 0.5;
     user-select: none;
     -webkit-user-drag: none;
@@ -115,7 +141,7 @@ div#textos-imagem {
 
 /* Estilização da frase motivacional */
 div#textos-imagem h1{
-    color: var(--laranja);
+    color: var(--dourado);
     font-size: 3em;
     font-weight: 700px;
 }
@@ -134,4 +160,297 @@ div#textos-imagem p {
     letter-spacing: -0.5px;
     line-height: 1.5;
     font-weight: 500;
+}
+
+section#bloco-sobre-mim-e-pd-school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#sobre-mim {
+    background-color: var(--preto-acinzentando);
+    display: flex;
+    justify-content: center;
+
+}
+
+div#container-sobremim {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 81px;
+    color: white;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    margin: 100px;
+} 
+
+div#container-sobremim div#texto h2 {
+    font-size: 2.2em;
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+div#container-sobremim div#texto {
+    display: flex;
+    font-size: 1.2em;
+    flex-direction: column;
+    width: 300px;
+}
+
+section#sobre-mim div#imagem img {
+    width: 460px;
+    border-radius: 20px;
+}
+
+section#sobre-mim button#btn-lermais {
+    width: 80px;
+    height: 40px;
+    background-color: #ebebeb;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+section#sobre-mim button#btn-lermais:hover {
+    transform: scale(1.05);
+    transition: all 150ms ease-in-out;
+    font-size: 0.72em;
+}
+
+/* INÍCIO PDSCHOOL*/
+section#pd-school{
+    background-color: var(--preto-acinzentando);
+}
+
+div#container-pdschool{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    gap: 81px;
+    color: white;
+}
+div#container-pdschool div#imagem-pdschool img{
+    width: 460px;
+    border-radius: 20px;
+}
+
+div#container-pdschool div#texto-pdschool{
+    display: flex;
+    font-size: 1.2em;
+    flex-direction: column;
+    width: 450px;
+}
+
+div#container-pdschool div#texto-pdschool h2{
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    color: var(--dourado);
+}
+
+div#container-pdschool div#texto-pdschool p{
+    font-size: 1.2em;
+}
+
+
+/* INÍCIO SOBRE PROJETO*/
+section#sobre-projeto{
+    display: flex;
+    justify-content: center;
+}
+
+div#container-sobreprojeto {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 81px;
+    color: white;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    margin: 100px;
+} 
+
+div#container-sobreprojeto div#texto h2 {
+    font-size: 2.2em;
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+div#container-sobreprojeto div#texto {
+    display: flex;
+    font-size: 1.2em;
+    flex-direction: column;
+    width: 300px;
+}
+
+h2#sobre-proj{
+    width: 400px;
+}
+
+section#sobre-projeto div#imagem img {
+    width: 460px;
+    border-radius: 20px;
+}
+
+section#sobre-projeto button#lermais {
+    width: 80px;
+    height: 40px;
+    background-color: #ebebeb;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+section#sobre-projeto button#lermais:hover {
+    transform: scale(1.05);
+    transition: all 150ms ease-in-out;
+    font-size: 0.72em;
+}
+
+
+/* Estilização da seção de depoimentos */
+section#depoimentos-secao {
+    position: relative;
+
+    margin: 0 auto;
+    padding: 100px;
+    background-color: #121211;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização dos botôes do carousel */
+#depoimentos-secao .carousel-button {
+    position: absolute;
+    top: calc(50% - 15px);
+    
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(200, 200, 200, .5);
+    color: rgba(0, 0, 0, .5);
+    font-size: 25px;
+    border: none;
+    border-radius: 50%;
+    transition: all 150ms ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#depoimentos-secao .carousel-button:hover {
+    top: calc(50% - 16px);
+    height: 32px;
+    width: 32px;
+    background-color: rgba(200, 200, 200, .9);
+    color: var(--preto);
+    font-size: 27px;
+}
+
+/* Posicionamento dos botões do carousel */
+#depoimentos-secao #anterior {
+    left: 90px;
+}
+
+#depoimentos-secao #proximo {
+    right: 90px;
+}
+
+/* Estilização da div onde estarão os depoimentos*/
+#depoimentos {
+    width: 1000px;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+/* Estilização dos cards de depoimento */
+.depoimento {
+    flex-shrink: none;
+    flex-grow: none;
+
+    padding: 30px;
+    min-height: 360px;
+    min-width: 320px;
+    border-radius: 10px;
+}
+
+/* Colorização dos cards de depoimento */
+.depoimento:nth-child(3n + 2) {
+    background-color: #F6BF73;
+}
+
+.depoimento:nth-child(3n + 3) {
+    background-color: #EBD2AC;
+}
+
+.depoimento:nth-child(3n + 4) {
+    background-color: #FCF4DC;
+}
+
+.depoimento:nth-last-child(1) {
+    background-color: inherit;
+}
+
+/* Perfil da pessoa que depôs */
+.perfil-depoimento {
+    margin-bottom: 31px;
+
+    display: grid;
+    grid-template-rows: 29px 21px;
+    grid-template-columns: 50px 215px;
+    column-gap: 15px;
+}
+
+/* Imagem da pessoa que depôs */
+.imagem-depoimento {
+    grid-row: 1 / 3;
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/* Nome da pessoa que depôs */
+.nome-depoimento {
+    color: #001122;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Instagram da pessoa que depôs */
+.instagram-depoimento {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Texto do depoimento */
+.comentario-depoimento {
+    color: #666666;
+    font-size: 16px;
+    font-weight: 500;
+
+    /* Código para que o texto corte na 8a linha e termine com reticências*/
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
