@@ -22,6 +22,7 @@
     scroll-behavior: smooth;
 }
 
+/* corpo do html */
 body {
     background-color: var(--preto-acinzentando);
 }
@@ -54,6 +55,7 @@ nav#navbar a.gradiente:hover {
     animation: bg 3s infinite;
 }
 
+/* animação na logo da cliente para aparecerem as cores do instagram */
 @keyframes bg {
     0% {
         color: #DD01E3;
@@ -159,11 +161,14 @@ div#textos-imagem p {
     font-weight: 500;
 }
 
+/* sessão envolvendo os três blocos (sobre mim, sobre a pd school, sobre o projeto) */
 section#bloco-sobre-mim-e-pd-school {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* SOBRE MIM */
 
 section#sobre-mim {
     background-color: var(--preto-acinzentando);
@@ -171,7 +176,7 @@ section#sobre-mim {
     justify-content: center;
 
 }
-
+/* Div que estiliza a imagem e e texto */
 div#container-sobremim {
     display: flex;
     align-items: center;
@@ -183,25 +188,25 @@ div#container-sobremim {
     margin: auto;
     margin: 100px;
 } 
-
+/* Mexendo no h2 */
 div#container-sobremim div#texto h2 {
     font-size: 2.2em;
     color: var(--dourado);
     margin-bottom: 10px;
 }
-
+/* mexendo nos paragrafos */
 div#container-sobremim div#texto {
     display: flex;
     font-size: 1.2em;
     flex-direction: column;
     width: 300px;
 }
-
+/* tamanho da imagem */
 section#sobre-mim div#imagem img {
     width: 460px;
     border-radius: 20px;
 }
-
+/* estilizando botão ler mais */
 section#sobre-mim button#btn-lermais {
     width: 80px;
     height: 40px;
@@ -212,18 +217,19 @@ section#sobre-mim button#btn-lermais {
     margin-top: 23px;
     cursor: pointer;
 }
-
+/* hover do botão ler mais */
 section#sobre-mim button#btn-lermais:hover {
     transform: scale(1.05);
     transition: all 150ms ease-in-out;
     font-size: 0.72em;
 }
 
-/* INÍCIO PDSCHOOL*/
+/* INÍCIO PDSCHOOL, SETANDO O BACKGROUND*/
 section#pd-school{
     background-color: var(--preto-acinzentando);
 }
 
+/* ESTILIZAÇÃO DA DIV CONTAINER PD SCHOOL */
 div#container-pdschool{
     display: flex;
     align-items: center;
@@ -234,11 +240,14 @@ div#container-pdschool{
     gap: 81px;
     color: white;
 }
+
+/* ESTILIZAÇÃO DA IMAGEM NA DIV CONTAINER-PDSCHOOL */
 div#container-pdschool div#imagem-pdschool img{
     width: 460px;
     border-radius: 20px;
 }
 
+/* ESTILIZAÇÃO DA DIV TEXTO-PDSCHOOL  */
 div#container-pdschool div#texto-pdschool{
     display: flex;
     font-size: 1.2em;
@@ -246,23 +255,27 @@ div#container-pdschool div#texto-pdschool{
     width: 450px;
 }
 
+/* ESTILIZANDO O TÍTULO DE NÍVEL 2 */
 div#container-pdschool div#texto-pdschool h2{
     margin-bottom: 10px;
     font-size: 2.2em;
     color: var(--dourado);
 }
 
+/* ESTILIZANDO O PARAGRÁFO DA DIV TEXTO-PDSCHOOL */
 div#container-pdschool div#texto-pdschool p{
     font-size: 1.2em;
 }
-
+/* FIM DA ESTILIZAÇÃO DA PDSCHOOL */
 
 /* INÍCIO SOBRE PROJETO*/
+/* Section que engolba essa parte do main para centralizar conteúdo */
 section#sobre-projeto{
     display: flex;
     justify-content: center;
 }
 
+/* Section que vai está a imagem e o texo */
 div#container-sobreprojeto {
     display: flex;
     align-items: center;
@@ -275,6 +288,7 @@ div#container-sobreprojeto {
     margin: 100px;
 } 
 
+/* Estilização dos caracteres do sub-título "Sobre Mim" */
 div#container-sobreprojeto div#texto h2 {
     font-size: 2.2em;
     color: var(--dourado);
@@ -285,18 +299,22 @@ div#container-sobreprojeto div#texto {
     display: flex;
     font-size: 1.2em;
     flex-direction: column;
-    width: 300px;
+    width: 330px;
 }
 
+/* Título referente SOBRE O PROJETO*/
 h2#sobre-proj{
     width: 400px;
 }
 
+/* configuração da largura e dar borda da imagem do sobre o projeto */
 section#sobre-projeto div#imagem img {
     width: 460px;
     border-radius: 20px;
 }
 
+
+/* Botão do "Ler Mais"*/
 section#sobre-projeto button#lermais {
     width: 80px;
     height: 40px;
@@ -308,11 +326,13 @@ section#sobre-projeto button#lermais {
     cursor: pointer;
 }
 
+/* Animação do botão "Ler Mais"*/
 section#sobre-projeto button#lermais:hover {
     transform: scale(1.05);
     transition: all 150ms ease-in-out;
     font-size: 0.72em;
 }
+
 
 
 /* Estilização da seção de depoimentos */
@@ -450,4 +470,156 @@ section#depoimentos-secao {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* estilização do texto que a cliente fez sobre ela mesma */
+section#sobre-mim-texto-container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* estilização da sessão que possui o texto do sobre mim */
+section#sobre-mim-texto {
+    max-width: 770px;
+    width: 100%;
+}
+
+/* estilização do título do texto sobre mim */
+section#sobre-mim-texto h1 {
+    margin: 60px 0 30px 0;
+    font-size: 2.3rem;
+}
+
+/* estilização dos paragráfos do texto da sessão sobre mim */
+section#sobre-mim-texto p {
+    color: #888888;
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: -0.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* estilização do container da imagem do sobre mim*/
+div#imagem-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 60px 0;
+    font-family: var(--open-sans);
+}
+
+/* estilização da imagem do sobre mim de fato */
+div#imagem-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+/*Estilização dos elementos do sobre mim */
+div#elementos-perfil {
+    margin-left: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*Estilização do nome da cliente*/
+div#elementos-perfil span#nome-thais {
+    color: #001122;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* estilização do @ do instagram da cliente */
+span.margin-bottom-zero{
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Sobre o Projeto Texto */
+section#sobre-projeto-texto {
+    color: #c4c4c4;
+    background-color: var(--preto-acinzentando);
+    text-align: center;
+    padding: 20px;
+    height: 470px;
+}
+/* estilizando titulo */
+section#sobre-projeto-texto h2{
+    color: white;
+    padding: 40px;
+    font-size: 2.3rem;
+}
+/* colocando espaço no paragrafo de cima */
+section#sobre-projeto-texto #p2 {
+    margin-top: 22px;
+}
+/* tamanho dos paragrafos */
+section#sobre-projeto-texto p {
+    font-size: 1.1em;
+}
+/* tamanho da caixa de todos os textos */
+section#sobre-projeto-texto div#paragrafos-sobre-projeto {
+    width: 720px;
+    margin: auto;
+    
+}
+
+/*rodape*/
+.rodape{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 100px 20px 100px;
+}
+
+/*codigo para separar a primeira parte do rodape*/
+.separar1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.separar1 span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/*codigo para ajustar a parte do contato do rodape */
+div.contato{
+    width: 25px;
+    display: inline-block;
+    font-size: 17px;
+    padding: 10px 0px 10px 0px;
+    min-width:12vw;
+}
+
+/*codigo para ajustar a parte da localização do rodape */
+div.localizacao{
+    width: 25px;
+    display: inline-block;
+    margin-right: 0vw;
+    font-size: 17px;
+    padding: 20px 0px 20px 0px;
+    min-width:25vw;
+}
+
+/*linha cinza que divide o rodape*/
+.linha-cinza{
+    border-bottom: 1px solid #ccc;
+}
+
+/*codigo para separar a segunda parte do rodape*/
+.separar2{
+    display: flex;
+    justify-content: space-between;
 }

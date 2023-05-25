@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/c687b2a461.js" crossorigin="anonymous"></script>
     <script src="./scripts/script.js" defer></script>
     <title>Thaís Melo</title>
 </head>
@@ -13,11 +14,11 @@
         <header id="cabecalho"> <!--Cabeçalho-->
             <nav id="navbar"> <!-- barra de navegação do site -->
                 <a href="https://www.instagram.com/thaismelopd/" id="titulo-menu" class="gradiente" target="_blank"> <!--Link para o instagram da cliente-->
-                    <h1>Thaís Melo</h1>
+                    <h1><abbr title="Logo">Thaís Melo</abbr></h1>
                 </a>
                 <div id="elementos"> <!-- Partes da página-->
-                    <a href="#">Sobre o Projeto</a>
-                    <a href="#">PD School</a>
+                    <a href="#container-sobreprojeto">Sobre</a>
+                    <a href="#pd-school">PD School</a>
                     <!--Botão para abrir o modal de contato-->
                     <span><button type="button" id="btn-contato">Contato</button></span> 
                 </div>
@@ -26,7 +27,7 @@
             <section id="imagem"> <!--Sessão aonde será colocada a imagem de fundo de Thaís explicando-->
                 <img src="images/imagem2-copy-alterada.png" alt="Foto de Thaís falando">
                 <div id="textos-imagem"> <!--Div para os textos que ficam à frente da imagem-->
-                    <h1>"A Decisão De Mudar, Muda Tudo!"</h1>
+                    <h1>"A Decisão de Mudar, Muda Tudo!"</h1>
                     
                     <div id="caixa-paragrafo"> <!--Div para delimitar o espaço ocupado pelo parágrafo-->
                         <p>Decidir mudar é o grande começo para uma nova vida.</p>
@@ -47,35 +48,37 @@
                 <div id="texto">
                     <h2>Sobre mim</h2>
                     <p>Queria convidar você a conhecer um pouco do que eu faço.</p>
-                    <button id="btn-lermais"> <a href="#" style="color: black">Ler Mais</a> </button>
+                    <button id="btn-lermais"> <a href="#sobre-mim-texto" style="color: black">Ler Mais</a> </button>
                 </div>
             </div>
             
           
         </section>
 
-        <!-- INÍCIO DA SECTION DA PD SCHOOL -->  
+        <!-- INÍCIO DA SECTION DA PD SCHOOL -->       
         <section id="pd-school">
-            <!-- DIV PARA AGRUPAR O TEXTO E A IMAGEM -->  
+
+            <!-- DIV PARA AGRUPAR O TEXTO E A IMAGEM --> 
             <div id="container-pdschool">
+
                 <!-- DIV PARA GUARDAR O TEXTO -->  
                 <div id="texto-pdschool">
                     <h2>PD School</h2>
                     <p>Programa de qualificação profissional voltado para estudantes da área de comunicação.</p>
                 </div>
                 
+                <!-- DIV PARA GUARDAR A IMAGEM -->
                 <div id="imagem-pdschool">
                     <img src="images/imagem1-cortada.png">
                 </div>
-                
             </div>
             
         </section>
-        
+        <!-- FIM DA SECTION PD SCHOOL -->
 
 
         <!-- Início da seção para a parte SOBRE O PROJETO -->
-        <!-- CSS: Da linha 244 até a 299-->
+        <!-- CSS: Da linha 266 até a 328 -->
         <section id="sobre-projeto">
             <div id="container-sobreprojeto">
 
@@ -83,11 +86,12 @@
                 <div id="imagem">
                     <img src="images/imagem5-cortada.png" alt="Thaís em uma reunião">
                 </div>
-                <!-- Texto SOBRE O PROJETO-->
+                
+                <!-- Texto SOBRE O PROJETO que fica ao lado da imagem -->
                 <div id="texto">
                     <h2 id="sobre-proj">Sobre o Projeto</h2>
                     <p>Queria convidar vocês a conhecer um pouco do que faço.</p>
-                    <button id="lermais"><a href="#" style="color: black"></a>Ler Mais</a></button>
+                    <a href="#sobre-projeto-texto"><button id="lermais">Ler Mais</button></a>
                 </div>
             </div>
         </section>
@@ -97,7 +101,7 @@
 
         <section id="depoimentos-secao"> <!-- Sessão de depoimentos -->
             <!-- Botões do carousel -->
-            <button id="anterior" class="carousel-button" type="button"><</button>
+            <button id="anterior" class="carousel-button" type="button">&lt;</button>
             <button id="proximo" class="carousel-button" type="button">></button>
             <!-- Lista de depoimentos -->
             <div id="depoimentos">
@@ -138,6 +142,64 @@
         </section>
 
     </section>
+
+    <!--Texto com o sobre mim completo da cliente.-->
+    <section id="sobre-mim-texto-container">
+        <!--Texto contendo algumas informações sobre o cliente-->
+        <section id="sobre-mim-texto">
+            <h1>Sobre Mim</h1>
+            <p>Fiz várias coisas durante esses poucos anos de vida que tenho. Fui proprietária de loja, professora, vendedora, coordenadora, gerente… a verdade é que sempre me virei do jeito que dava porque não sabia bem o que queria. E como pra quem não sabe onde ir, qualquer caminho serve, andei por todos os lados. </p>
+            <p>Escutei meu coração e resolvi entrar em uma outra área. Conheci pessoas que viram potencial em mim e me deram oportunidade para trilhar uma trajetória na direção certa.</p>
+            <p>Me encontro, atualmente, em um caminho que tenho orgulho de falar sobre. Tenho uma empresa com mais dois sócios que se transformou num grupo - onde somos: agência de marketing, empresa de consultoria para negócios, escola, empresa de tecnologia e projeto social.</p>
+            <p>Além disso, gosto de dividir minha visão de mundo e compartilhar minha vida. Sou fã de leitura, apaixonada por café e trabalho todos os dias pra ser uma pessoa melhor pra mim mesma e para as pessoas que estão ao meu redor. Acredito em Deus e busco compreender a palavra pois a espiritualidade é uma esfera da vida que busco evoluir.</p>
+            <p>Prezo por uma rotina com significado e bons hábitos porque não quero deixar de lado os 5 anos que estudei na área de saúde. Então, sempre que tiver abertura para falar sobre saúde, estarei fazendo minha parte.</p>
+            <p>Hoje consigo ter clareza do meu propósito profissional e quero ajudar outras pessoas a encontrarem o seu. Vamos nessa?”</p>
+            <!--Informações sobre o instagram da cliente-->
+            <div id="imagem-container">
+                <img src="images/imagem4.png" alt="Foto de perfil do instagram de Thaís" id="foto-perfil-insta">
+                <div id="elementos-perfil">
+                    <span class="margin-bottom-zero" id="nome-thais">Thaís Melo</span>
+                    <span class="margin-bottom-zero">@thaismelopd</span>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Section sobre o projeto -->
+    <section id="sobre-projeto-texto">
+        <h2>Sobre o Projeto</h2>
+    <!-- div que junta todos os paragrafos -->
+        <div id="paragrafos-sobre-projeto">
+            <p>A mentoria é um ambiente para falarmos sobre: carreira, negócio, empreendedorismo, mentalidade… mas principalmente, sobre você.</p>
+            <p id="p2">A gente acaba ficando tão preocupado com o extraordinário que esquece das coisas ordinárias. O ser humano é o fator principal de tudo que conversamos aqui.</p>
+            <p style="width: 760px; padding-top: 2px;">Meu principal objetivo é ajudar pessoas a encontrarem sentido em suas carreiras através do autoconhecimento. Faço isso pois o caminhas das pedras eu já trilhei. Me coloco como mentora desse processo pra que vocês não tenham que passar o tempo que passei pra descobrir o que realmente querem.</p>
+        </div>
+    </section>
     </main>
+    <!-- Criação da classe rodape no footer -->
+    <footer class="rodape">
+        <!-- Criação da div 'separar1' para separar a classe 'contato e localização' -->
+        <div class="separar1"> 
+            <div class="contato">
+                <span><strong>Contato</strong></span>
+                <p>thaismelopd@gmail.com </p>
+                <p>(81) 97909-4816 </p>
+            </div>
+            <div class="localizacao">
+                <span><strong>Localização</strong></span>
+                <p>Recife, Rua Antônio Novais, graças, 86.</p>
+                <p>52050-280</p>
+            </div>
+        </div><br>
+        <!-- Criação da classe linha-cinza, para criação de uma linha para separar o rodade -->
+        <div class="linha-cinza"></div><br>
+        <!-- Criação da classe 'separar2', para separar a segunda parte do rodape -->
+        <div class="separar2">
+            <p>&copy; 2023 PD-Tech, Inc.</p>
+            <ul class="icones-sociais">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i> 
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
