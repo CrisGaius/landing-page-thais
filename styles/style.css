@@ -224,50 +224,6 @@ section#sobre-mim button#btn-lermais:hover {
     font-size: 0.72em;
 }
 
-/* INÍCIO PDSCHOOL, SETANDO O BACKGROUND*/
-section#pd-school{
-    background-color: var(--preto-acinzentando);
-}
-
-/* ESTILIZAÇÃO DA DIV CONTAINER PD SCHOOL */
-div#container-pdschool{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
-    gap: 81px;
-    color: white;
-}
-
-/* ESTILIZAÇÃO DA IMAGEM NA DIV CONTAINER-PDSCHOOL */
-div#container-pdschool div#imagem-pdschool img{
-    width: 460px;
-    border-radius: 20px;
-}
-
-/* ESTILIZAÇÃO DA DIV TEXTO-PDSCHOOL  */
-div#container-pdschool div#texto-pdschool{
-    display: flex;
-    font-size: 1.2em;
-    flex-direction: column;
-    width: 450px;
-}
-
-/* ESTILIZANDO O TÍTULO DE NÍVEL 2 */
-div#container-pdschool div#texto-pdschool h2{
-    margin-bottom: 10px;
-    font-size: 2.2em;
-    color: var(--dourado);
-}
-
-/* ESTILIZANDO O PARAGRÁFO DA DIV TEXTO-PDSCHOOL */
-div#container-pdschool div#texto-pdschool p{
-    font-size: 1.2em;
-}
-/* FIM DA ESTILIZAÇÃO DA PDSCHOOL */
-
 /* INÍCIO SOBRE PROJETO*/
 /* Section que engolba essa parte do main para centralizar conteúdo */
 section#sobre-projeto{
@@ -279,7 +235,7 @@ section#sobre-projeto{
 div#container-sobreprojeto {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 81px;
     color: white;
     max-width: 1000px;
@@ -400,6 +356,7 @@ section#depoimentos-secao {
 .depoimento {
     flex-shrink: none;
     flex-grow: none;
+    scroll-behavior: smooth;
 
     padding: 30px;
     min-height: 360px;
@@ -408,20 +365,16 @@ section#depoimentos-secao {
 }
 
 /* Colorização dos cards de depoimento */
-.depoimento:nth-child(3n + 2) {
+.depoimento:nth-child(3n + 1) {
     background-color: #F6BF73;
 }
 
-.depoimento:nth-child(3n + 3) {
+.depoimento:nth-child(3n + 2) {
     background-color: #EBD2AC;
 }
 
-.depoimento:nth-child(3n + 4) {
+.depoimento:nth-child(3n + 3) {
     background-color: #FCF4DC;
-}
-
-.depoimento:nth-last-child(1) {
-    background-color: inherit;
 }
 
 /* Perfil da pessoa que depôs */
