@@ -22,13 +22,8 @@
     scroll-behavior: smooth;
 }
 
-html {
-    width: 100%;
-}
-
 /* corpo do html */
 body {
-    width: 100%;
     background-color: var(--preto-acinzentado);
 }
 
@@ -652,22 +647,21 @@ div.localizacao{
 /*Celular*/
 @media screen and (max-width: 768px){
 
-    * {
-        outline: 1px solid crimson;
-    }
     :root {
         font-size: 14px;
     }
 
-    nav#navbar {
-    }
-
-    nav#navbar #titulo-menu {
-        
+    #textos-imagem {
+        text-align: center;
+        max-width: 300px;
     }
     
     div#elementos {
         gap: 10px;
+    }
+
+    #caixa-paragrafo {
+        max-width: 300px;
     }
 
     div#elementos a {
@@ -684,8 +678,7 @@ div.localizacao{
 
     div#textos-imagem p {
         font-size: 1.2em;
-        width: 310px;
-        margin: auto;
+        max-width: 300px;
     }
 
     .secao {
