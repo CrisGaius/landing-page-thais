@@ -1,10 +1,27 @@
+// Seleção da imagem principal
+if (window.innerWidth <= 768) {
+  document.querySelector('section#imagem img').src = '../images/imagem-thais-falando.jpeg';
+}
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    document.querySelector('section#imagem img').src = '../images/imagem-thais-falando.jpeg';
+  } else {
+    document.querySelector('section#imagem img').src = '../images/imagem2-copy-alterada-nova.jpeg';
+  }
+})
+
 // Index do item do meio atual
-let currentIndex = 2;
+let currentIndex = window.innerWidth <= 768? 0 : 1;
 
 // Evento dos botões do carousel
 document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('click', () => {
   // Se for o da esquerda diminui o valor, se não, aumenta
-  currentIndex += e.id === 'anterior'? -1 : 1;
+  if (window.innerWidth >= 768) {
+    currentIndex += e.id === 'anterior'? -3 : 3;
+  } else {
+    currentIndex += e.id === 'anterior'? -1 : 1;
+  }
+
   const listaDeCards = document.querySelectorAll('.depoimento');
   
   // Garantindo que o index não saia do range válido
@@ -32,27 +49,17 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
 }));
 
 // Abrindo Modal
-var botao = document.getElementById('btn-contato')
-var modal = document.getElementsByClassName('modal')[0]
-var conteudo = document.getElementsByClassName('content')[0]
+const botao = document.getElementById('btn-contato');
+const modal = document.getElementsByClassName('modal')[0];
+let conteudo = document.getElementsByClassName('content')[0];
 
 botao.addEventListener('click', function abrirModal() {
-    modal.style.display = 'flex'
-    var conteudo = document.getElementsByClassName('content')[0]
+    modal.style.display = 'flex';
+    conteudo = document.getElementsByClassName('content')[0];
 })
 
-var fechar = document.getElementsByClassName('modal__close')[0]
+const fechar = document.getElementsByClassName('modal__close')[0];
 
 fechar.addEventListener('click', function fecharModal () {
-    
-    modal.style.display = 'none'
-})
-
-//menu hamburguer
-
-function teste () {
-  var botaoMenu = document.getElementById('botao-menu')
-  console.log(botaoMenu)
-  var sobreElemento = document.getElementById('sobreElemento')
-  var botaoElemento = document.getElementById('btn-contato')
-}
+    modal.style.display = 'none';
+});

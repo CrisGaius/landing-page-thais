@@ -93,8 +93,8 @@ div#elementos {
     font-weight: bold;
 }
 
-div#elementos span#burguer {
-    
+i#burguer {
+    display: block;
     cursor: pointer;
 }
 
@@ -124,7 +124,7 @@ div#elementos button#btn-contato {
 /* Estilização do botão do menu [ao passar o mouse por cima] */
 div#elementos button#btn-contato:hover {
     scale: 1.05;
-    transition: all 0.15s ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 
 /* Estilização da sessão com a imagem de thaís de fundo. */ 
@@ -267,7 +267,7 @@ section#depoimentos-secao {
 /* Estilização da div onde estarão os depoimentos*/
 #depoimentos {
     width: 1000px;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
@@ -649,71 +649,121 @@ div.localizacao{
     z-index: 9999999;
 }
 
-
-
 /*Celular*/
 @media screen and (max-width: 768px){
+
+    * {
+        outline: 1px solid crimson;
+    }
     :root {
         font-size: 14px;
     }
 
     nav#navbar {
-        flex-direction: column;
     }
 
     nav#navbar #titulo-menu {
-        border-bottom: 1px solid var(--dourado);
+        
     }
     
     div#elementos {
-        margin-top: 15px;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    div#elementos span#burguer {
-        display: block;
+        gap: 10px;
     }
 
     div#elementos a {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
-    
+    div#elementos button#btn-contato {
+        font-size: .9em;
+    }
+
+    div#textos-imagem h1 {
+        font-size: 1.4em;
+    }
+
+    div#textos-imagem p {
+        font-size: 1.2em;
+        width: 310px;
+        margin: auto;
+    }
+
+    .secao {
+        margin: 0 auto;
+        max-width: 400px;
+    }
 
     .container {
+        width: 100%;
         margin: 50px;
         padding: 10px;
         gap: 30px;
     }
 
+    .texto h2 {
+        font-size: 1.5rem;
+    }
+
     .texto {
         max-width: 200px;
+        font-size: 1rem;
     }
 
     .imagem img {
-        max-width: 200px;
+        max-width: 180px;
     }
 
     div#container-sobreprojeto {
         justify-content: flex-start;
     }
 
+    .btn-lermais {
+        font-size: .8em;
+        width: 65px;
+        height: 35px;
+    }
+
+    .btn-lermais:hover {
+        font-size: .8em;
+    }
+
     section#depoimentos-secao {
-        padding: 20px 20px 50px 20px;
+        margin-bottom: 30px;
+        padding: 20px 10px 20px 10px;
+        max-width: 350px;
     }
 
     #depoimentos-secao button#anterior {
-        left: 10px;
+        width: 50px;
+        height: 50px;
+        left: 0;
     }
 
     #depoimentos-secao button#proximo {
-        right: 10px;
+        width: 50px;
+        height: 50px;
+        right: 0;
     }
 
     #depoimentos-secao div#depoimentos {
-        padding: 57.5px;
-        width: 650px;
+        max-width: 300px;
         gap: 57.5px;
+    }
+
+    .depoimento {
+        min-width: 100%;
+        max-width: 300px
+    }
+
+    div.contato, div.localizacao {
+        font-size: .9em;
+    }
+
+    .rodape {
+        padding: 50px 20px 10px 20px;
+    }
+
+    div.separar2 p {
+        font-size: .9em;
     }
 }
