@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/c687b2a461.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="./scripts/script.js" defer></script>
     <title>Thaís Melo</title>
 </head>
 <body>
     <main>
         <header id="cabecalho"> <!--Cabeçalho-->
-            <nav id="navbar"> <!-- barra de navegação do site -->
+            <nav id="navbar" class="flex-container"> <!-- barra de navegação do site -->
                 <a href="https://www.instagram.com/thaismelopd/" id="titulo-menu" class="gradiente" target="_blank"> <!--Link para o instagram da cliente-->
                     <h1><abbr title="Logo">Thaís Melo</abbr></h1>
                 </a>
                 <div id="elementos"> <!-- Partes da página-->
-                    <a href="#container-sobreprojeto">Sobre</a>
-                    <a href="#pd-school">PD School</a>
+                    <span class="material-symbols-outlined" id="burguer" id="botao-menu" onclick="teste()">menu</span>
+                    <a href="#container-sobreprojeto" id="sobreElemento">Sobre</a>
                     <!--Botão para abrir o modal de contato-->
-                    <span><button type="button" id="btn-contato">Contato</button></span> 
+                    <button type="button" id="btn-contato">Contato</button>
                 </div>
             </nav>
 
-            <section id="imagem"> <!--Sessão aonde será colocada a imagem de fundo de Thaís explicando-->
+            <section id="imagem" class="flex-container"> <!--Sessão aonde será colocada a imagem de fundo de Thaís explicando-->
                 <img src="images/imagem2-copy-alterada.png" alt="Foto de Thaís falando">
                 <div id="textos-imagem"> <!--Div para os textos que ficam à frente da imagem-->
                     <h1>"A Decisão de Mudar, Muda Tudo!"</h1>
@@ -37,37 +38,37 @@
         </header> <!--Fim do cabeçalho-->
 
     <!-- Bloco maior que posiciona os 3 topicos -->
-    <section id="bloco-sobre-mim-e-pdschool">
+    <section id="bloco-sobre-mim-e-pd-school">
         <!-- Inicio do sobre mim -->
-        <section id="sobre-mim">
+        <section class="flex-container">
             <!-- Container maior que guarda texto e imagem -->
-            <div id="container-sobremim">
-                <div id="imagem">
+            <div id="container-sobremim" class="flex-container container">
+                <div class="imagem">
                     <img src="images/imagem3-cortada.png" alt="Foto de Thaís sorrindo">
                 </div>
-                <div id="texto">
+                <div class="texto">
                     <h2>Sobre mim</h2>
                     <p>Queria convidar você a conhecer um pouco do que eu faço.</p>
-                    <a href="#sobre-mim-texto" style="color: black"><button id="btn-lermais"> Ler Mais</button></a>
+                    <a href="#sobre-mim-texto" style="color: black"><button class="btn-lermais"> Ler Mais</button></a>
                 </div>
             </div>
             
           
         </section>
         <!-- Início da seção para a parte SOBRE O PROJETO -->
-        <!-- CSS: Da linha 266 até a 328 -->
-        <section id="sobre-projeto">
-            <div id="container-sobreprojeto">
+        <!-- CSS: Da linha 210 até a 238 -->
+        <section class="flex-container">
+            <div id="container-sobreprojeto" class="flex-container container">
                 
                 <!-- Texto SOBRE O PROJETO que fica ao lado da imagem -->
-                <div id="texto">
-                    <h2 id="sobre-proj">Sobre o Projeto</h2>
+                <div class="texto">
+                    <h2>Sobre o Projeto</h2>
                     <p>Queria convidar vocês a conhecer um pouco do que faço.</p>
-                    <a href="#sobre-projeto-texto"><button id="lermais">Ler Mais</button></a>
+                    <a href="#sobre-projeto-texto"><button class="btn-lermais">Ler Mais</button></a>
                 </div>
 
                 <!-- Imagem SOBRE O PROJETO-->
-                <div id="imagem">
+                <div class="imagem">
                     <img src="images/imagem5-cortada.png" alt="Thaís em uma reunião">
                 </div>
                 
@@ -77,10 +78,10 @@
 
 
 
-        <section id="depoimentos-secao"> <!-- Sessão de depoimentos -->
+        <section id="depoimentos-secao" class="flex-container"> <!-- Sessão de depoimentos -->
             <!-- Botões do carousel -->
-            <button id="anterior" class="carousel-button" type="button">&lt;</button>
-            <button id="proximo" class="carousel-button" type="button">&gt;</button>
+            <button id="anterior"  class="carousel-button flex-container" type="button">&lt;</button>
+            <button id="proximo"  class="carousel-button flex-container" type="button">&gt;</button>
             <!-- Lista de depoimentos -->
             <div id="depoimentos">
                 <!-- Item da lista de depoimentos -->
@@ -126,7 +127,7 @@
                         <p class="nome-depoimento">Exemplo</p>
                         <p class="instagram-depoimento">@Exemplo</p>
                     </div>
-                    <p class="comentario-depoimento">It's time to unveil the hype y'all been waiting for It's time to bring an end to question of who will win? It's us I used to have bad feeling Premonition of falling short Now I have no fear since we're here To fight it together I believe we can fly up in the sky One day we may just be able to touch down on a star Off the road we have to go The roadless path we shall proceed until the end of our roles There's no turning back for us 'cause we will never give up I thought that I told you I'm not a robot, no I thought I told you I'm not a phantom I'm in your face It's time to show everything we got To find a way out from this fake mirage Our life is happening in front of you, right now It's time to seize it I believe we can fly up in the sky One day we may just be able to touch down on a star Off the road we have to go The roadless path we shall proceed until the end of our roles There's no turning back for us 'cause we will never give up It's our turn to get back To grab the future which we fully believe And it's not given to us It's earned And I believe we can fly up in the sky One day we may just be able to touch down on a star Off the road we have to go The roadless path we shall proceed until the end of our roles There's no turning back for us Because you know that I believe we can fly up in the sky One day we may just be able to touch down on a star Off the road we have to go The roadless path we shall proceed until the end of our roles There's no turning back for us 'cause we will never give up</p>
+                    <p class="comentario-depoimento">It's time to unveil the hype y'all been waiting for It's time to bring an end to question of who will win? It's us I used to have bad feeling Premonition of falling short Now I have no fear since we're here To fight it together I believe we can fly up in the sky One day we may just be able to touch down on a star Off the road we have to go The roadless path we shall proceed until the end of our roles There's no turning back for us 'cause we will never give up I thought that I told you I'm not a robot, no I thought I told you I'm not a phantom I'm in your face It's time to show everything we got To find a way out from this fake mirage Our life is happening in front of you, right now It's time to seize it I believe we can fly up in the sky One day we may just be able to touch down on a star Off the road we have to go The roadless path we shall proceed until the end of our roles</p>
                 </div>
                 <div class="depoimento">
                     <div class="perfil-depoimento">
@@ -134,7 +135,7 @@
                         <p class="nome-depoimento">Exemplo</p>
                         <p class="instagram-depoimento">@Exemplo</p>
                     </div>
-                    <p class="comentario-depoimento">You try to run me through Hold on, think again Don't you know what you're starting? But you sure ain't got a clue How bad this will go Don't you know, know my art? (Art of war) And as you look to the horizon, not a cloud But then stormy weather's caught you cold Seems like it crept up out of nowhere all around you It's not quite what you foretold You'll never see it coming You'll see that my mind is too fast for eyes You're done in By the time it's hit you, your last surprise Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh You think you got your game Planned out to a T Yet I'm two steps ahead, yeah So, you step into my way Stand down, it's a trap One more step and you're dead (yeah you're dead) Why just a picosecond ago, clear blue skies? But now lightning's struck your last resolve It's not an accident that no one hears your cries As your last strength seems to dissolve You'll never see it coming You'll see that my mind is too fast for eyes You're done in By the time it's hit you, your last surprise I'm coming for you My game's always so fast, so fine You're spun in by the net You didn't catch it in time Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Better think about your game Are you sure your next move's the right one for you? Are you sure you won't get outmaneuvered Again and again, my friend? You'll never see it coming You'll see that my mind is too fast for eyes You're done in By the time it's hit you, your last surprise I'm coming for you My game's always so fast, so fine You're spun in by the net You didn't catch it in time Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh</p>
+                    <p class="comentario-depoimento">You try to run me through Hold on, think again Don't you know what you're starting? But you sure ain't got a clue How bad this will go Don't you know, know my art? (Art of war) And as you look to the horizon, not a cloud But then stormy weather's caught you cold Seems like it crept up out of nowhere all around you It's not quite what you foretold You'll never see it coming You'll see that my mind is too fast for eyes You're done in By the time it's hit you, your last surprise Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh Ooh, ooh, ooh You think you got your game Planned out to a T Yet I'm two steps ahead, yeah So, you step into my way Stand down, it's a trap One more step and you're dead (yeah you're dead) Why just a picosecond ago, clear blue skies?</p>
                 </div>
             </div>
         </section>
@@ -142,9 +143,9 @@
     </section>
 
     <!--Texto com o sobre mim completo da cliente.-->
-    <section id="sobre-mim-texto-container">
+    <section id="sobre-mim-texto-container" class="flex-container">
         <!--Texto contendo algumas informações sobre o cliente-->
-        <section id="sobre-mim-texto">
+        <section id="sobre-mim-texto" class="padrao-textos">
             <h1>Sobre Mim</h1>
             <p>Fiz várias coisas durante esses poucos anos de vida que tenho. Fui proprietária de loja, professora, vendedora, coordenadora, gerente… a verdade é que sempre me virei do jeito que dava porque não sabia bem o que queria. E como pra quem não sabe onde ir, qualquer caminho serve, andei por todos os lados. </p>
             <p>Escutei meu coração e resolvi entrar em uma outra área. Conheci pessoas que viram potencial em mim e me deram oportunidade para trilhar uma trajetória na direção certa.</p>
@@ -153,7 +154,7 @@
             <p>Prezo por uma rotina com significado e bons hábitos porque não quero deixar de lado os 5 anos que estudei na área de saúde. Então, sempre que tiver abertura para falar sobre saúde, estarei fazendo minha parte.</p>
             <p>Hoje consigo ter clareza do meu propósito profissional e quero ajudar outras pessoas a encontrarem o seu. Vamos nessa?”</p>
             <!--Informações sobre o instagram da cliente-->
-            <div id="imagem-container">
+            <div id="imagem-container" class="flex-container">
                 <img src="images/imagem4.png" alt="Foto de perfil do instagram de Thaís" id="foto-perfil-insta">
                 <div id="elementos-perfil">
                     <span class="margin-bottom-zero" id="nome-thais">Thaís Melo</span>
@@ -166,10 +167,10 @@
     <section id="sobre-projeto-texto">
         <h2>Sobre o Projeto</h2>
     <!-- div que junta todos os paragrafos -->
-        <div id="paragrafos-sobre-projeto">
+        <div id="paragrafos-sobre-projeto" class="padrao-textos">
             <p>A mentoria é um ambiente para falarmos sobre: carreira, negócio, empreendedorismo, mentalidade… mas principalmente, sobre você.</p>
             <p id="p2">A gente acaba ficando tão preocupado com o extraordinário que esquece das coisas ordinárias. O ser humano é o fator principal de tudo que conversamos aqui.</p>
-            <p style="width: 760px; padding-top: 2px;">Meu principal objetivo é ajudar pessoas a encontrarem sentido em suas carreiras através do autoconhecimento. Faço isso pois o caminhas das pedras eu já trilhei. Me coloco como mentora desse processo pra que vocês não tenham que passar o tempo que passei pra descobrir o que realmente querem.</p>
+            <p>Meu principal objetivo é ajudar pessoas a encontrarem sentido em suas carreiras através do autoconhecimento. Faço isso pois o caminhas das pedras eu já trilhei. Me coloco como mentora desse processo pra que vocês não tenham que passar o tempo que passei pra descobrir o que realmente querem.</p>
         </div>
     </section>
     </main>
@@ -194,10 +195,54 @@
         <div class="separar2">
             <p>&copy; 2023 PD-Tech, Inc.</p>
             <ul class="icones-sociais">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i> 
+                <a href="https://www.instagram.com/thaismelopd/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </ul>
         </div>
     </footer>
+    <div id="btn-contato" class="modal">
+
+        <!-- Conteudo do Modal -->
+        <div class="content">
+    
+            <h1>Entre em Contato</h1>
+    
+            <form action="https://formsubmit.co/vini.nelso@gmail.com" method="post" id="demo-modal" class="form">
+                <!-- Input do Nome -->
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" required>
+    
+                <!-- Input do E-mail -->
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email" required>
+    
+                <!-- Input do Contato -->
+                <label for="contato">Telefone</label>
+                <input type="text" name="contato" id="contato" required>
+    
+                <!-- Input do Mensagem -->
+                <label for="mensage">Mensagem</label>
+                <textarea name="mensage" id="mensage" ></textarea>
+    
+                <input type="hidden" name="_captcha" value="false">
+    
+                    <!-- Checkbox para termos de dados -->
+                    <div class="termos">
+                        <input type="checkbox" name="checkbox" class="checkbox" required>
+                        <label for="checkbox" style="margin-bottom: 14px;">Concordo em enviar meus dados.</label>
+                    </div>
+    
+                <!-- Botão para enviar dados -->
+                <button type="submit">Enviar</button>
+    
+                <!-- Redirecionando para pagina de inicio -->
+                <input type="hidden" name="_next" value="LINK DO SITE HTTP-BLABLABLA">
+    
+                <!--X para fechar modal-->
+                <a href="#" class="modal__close" width="50px" >&times;</a>
+    
+            </form>
+        </div>
+    </div>
 </body>
 </html>

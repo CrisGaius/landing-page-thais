@@ -8,13 +8,21 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
   const listaDeCards = document.querySelectorAll('.depoimento');
   
   // Garantindo que o index não saia do range válido
-  // OBS: sempre haverão ter três cards na tela, ou seja, o 1o e o último nunca estrão no meio
-  if (currentIndex < 2) {
-    currentIndex = listaDeCards.length - 2;
-  } else if (currentIndex > listaDeCards.length - 2) {
-    currentIndex = 1;
+  // OBS: Com telas maiores, sempre haverão ter três cards na tela, ou seja, o 1o e o último nunca estrão no meio
+  if (window.innerWidth < 768) {
+    if (currentIndex < 0) {
+      currentIndex = listaDeCards.length - 1;
+    } else if (currentIndex > listaDeCards.length -1) {
+      currentIndex = 0;
+    }
+    } else {
+    if (currentIndex < 2) {
+      currentIndex = listaDeCards.length - 2;
+    } else if (currentIndex > listaDeCards.length - 2) {
+      currentIndex = 1;
+    }
   }
-  console.log(currentIndex)
+
   // Movendo os cards para que o card do index esteja no meio
   listaDeCards[currentIndex].scrollIntoView({
     inline: 'center',
@@ -22,3 +30,29 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
     behavior: 'smooth',
   });
 }));
+
+// Abrindo Modal
+var botao = document.getElementById('btn-contato')
+var modal = document.getElementsByClassName('modal')[0]
+var conteudo = document.getElementsByClassName('content')[0]
+
+botao.addEventListener('click', function abrirModal() {
+    modal.style.display = 'flex'
+    var conteudo = document.getElementsByClassName('content')[0]
+})
+
+var fechar = document.getElementsByClassName('modal__close')[0]
+
+fechar.addEventListener('click', function fecharModal () {
+    
+    modal.style.display = 'none'
+})
+
+//menu hamburguer
+
+function teste () {
+  var botaoMenu = document.getElementById('botao-menu')
+  console.log(botaoMenu)
+  var sobreElemento = document.getElementById('sobreElemento')
+  var botaoElemento = document.getElementById('btn-contato')
+}

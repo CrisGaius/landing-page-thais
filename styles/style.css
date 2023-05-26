@@ -4,7 +4,7 @@
 
 /* Declaração de variáveis para as fontes e cores da página */
 :root { 
-    --preto-acinzentando: #121211;
+    --preto-acinzentado: #121211;
     --laranja: #EB5E28;
     --dourado: #F6BF73;
     --forum: 'Forum', cursive;
@@ -22,17 +22,32 @@
     scroll-behavior: smooth;
 }
 
+html {
+    width: 100%;
+}
+
 /* corpo do html */
 body {
-    background-color: var(--preto-acinzentando);
+    width: 100%;
+    background-color: var(--preto-acinzentado);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para impedir de selecionar imagens e arrastá-las pela tela */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 /* Estilização da barra de navegação do site */
 nav#navbar {
-    background-color: var(--preto-acinzentando);
+    width: 100%;
     color: white;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 15px 15px 15px 15px;
 }
@@ -47,11 +62,6 @@ nav#navbar a#titulo-menu {
 /* Projeto de animação ao passar por cima do nome da cliente */
 nav#navbar a.gradiente:hover {
     color: #DD01E3;
-    /* background-image: linear-gradient(to bottom, #DD01E3, #FE0076, #FFC23B);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: white; */
     animation: bg 3s infinite;
 }
 
@@ -83,17 +93,19 @@ div#elementos {
     font-weight: bold;
 }
 
+div#elementos span#burguer {
+    
+    cursor: pointer;
+}
+
 /* Estilização dos links da página que encontram-se no menu */
 div#elementos a {
     color: white;
     font-size: .9em;
-
 }
 
 /* Estilização dos links da página que encontram-se no menu [ao passar o mouse] */
-div#elementos a:hover {
-    text-decoration: underline;
-}
+div#elementos a:hover {text-decoration: underline;}
 
 /* Estilização do botão do menu */
 div#elementos button#btn-contato {
@@ -115,12 +127,8 @@ div#elementos button#btn-contato:hover {
     transition: all 0.15s ease-in-out;
 }
 
-/* Estilização da sessão com a imagem de thaís de fundo. */
-section#imagem {
-    background-color: var(--preto-acinzentando);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Estilização da sessão com a imagem de thaís de fundo. */ 
+section#imagem { 
     position: relative;
     text-align: center;
 }
@@ -129,14 +137,10 @@ section#imagem {
 section#imagem img {
     width: 100%;
     opacity: 0.5;
-    user-select: none;
-    -webkit-user-drag: none;
 }
 
 /* Definindo position absolute para que os textos fiquem à frente da imagem */
-div#textos-imagem {
-    position: absolute;
-}
+div#textos-imagem {position: absolute;}
 
 /* Estilização da frase motivacional */
 div#textos-imagem h1{
@@ -161,117 +165,44 @@ div#textos-imagem p {
     font-weight: 500;
 }
 
-/* sessão envolvendo os três blocos (sobre mim, sobre a pd school, sobre o projeto) */
-section#bloco-sobre-mim-e-pd-school {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    gap: 81px;
+    color: white;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    margin: 100px;
 }
 
 /* SOBRE MIM */
-
-section#sobre-mim {
-    background-color: var(--preto-acinzentando);
-    display: flex;
-    justify-content: center;
-
-}
 /* Div que estiliza a imagem e e texto */
 div#container-sobremim {
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
-    gap: 81px;
-    color: white;
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
-    margin: 100px;
 } 
+
 /* Mexendo no h2 */
-div#container-sobremim div#texto h2 {
+.texto h2 {
     font-size: 2.2em;
     color: var(--dourado);
     margin-bottom: 10px;
 }
+
 /* mexendo nos paragrafos */
-div#container-sobremim div#texto {
-    display: flex;
+.texto {
+    display: flex; 
     font-size: 1.2em;
     flex-direction: column;
-    width: 300px;
-}
-/* tamanho da imagem */
-section#sobre-mim div#imagem img {
-    width: 460px;
-    border-radius: 20px;
-}
-/* estilizando botão ler mais */
-section#sobre-mim button#btn-lermais {
-    width: 80px;
-    height: 40px;
-    background-color: #ebebeb;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 23px;
-    cursor: pointer;
-}
-/* hover do botão ler mais */
-section#sobre-mim button#btn-lermais:hover {
-    transform: scale(1.05);
-    transition: all 150ms ease-in-out;
-    font-size: 0.72em;
-}
-
-/* INÍCIO SOBRE PROJETO*/
-/* Section que engolba essa parte do main para centralizar conteúdo */
-section#sobre-projeto{
-    display: flex;
-    justify-content: center;
-}
-
-/* Section que vai está a imagem e o texo */
-div#container-sobreprojeto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 81px;
-    color: white;
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
-    margin: 100px;
-} 
-
-/* Estilização dos caracteres do sub-título "Sobre Mim" */
-div#container-sobreprojeto div#texto h2 {
-    font-size: 2.2em;
-    color: var(--dourado);
-    margin-bottom: 10px;
-}
-
-div#container-sobreprojeto div#texto {
-    display: flex;
-    font-size: 1.2em;
-    flex-direction: column;
-    width: 330px;
-}
-
-/* Título referente SOBRE O PROJETO*/
-h2#sobre-proj{
     width: 400px;
 }
 
-/* configuração da largura e dar borda da imagem do sobre o projeto */
-section#sobre-projeto div#imagem img {
+/* tamanho da imagem */
+.imagem img {
     width: 460px;
     border-radius: 20px;
 }
 
-
-/* Botão do "Ler Mais"*/
-section#sobre-projeto button#lermais {
+/* estilizando botão ler mais */
+.btn-lermais {
     width: 80px;
     height: 40px;
     background-color: #ebebeb;
@@ -282,26 +213,25 @@ section#sobre-projeto button#lermais {
     cursor: pointer;
 }
 
-/* Animação do botão "Ler Mais"*/
-section#sobre-projeto button#lermais:hover {
+/* hover do botão ler mais */
+.btn-lermais:hover {
     transform: scale(1.05);
     transition: all 150ms ease-in-out;
     font-size: 0.72em;
 }
 
 
+/* Ínicio SOBRE PROJETO*/
+/* Section que vai está a imagem e o texo */
+div#container-sobreprojeto {
+    justify-content: space-between;
+} 
 
 /* Estilização da seção de depoimentos */
 section#depoimentos-secao {
     position: relative;
-
     margin: 0 auto;
     padding: 100px;
-    background-color: #121211;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Estilização dos botôes do carousel */
@@ -318,10 +248,6 @@ section#depoimentos-secao {
     border: none;
     border-radius: 50%;
     transition: all 150ms ease-in-out;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #depoimentos-secao .carousel-button:hover {
@@ -334,19 +260,14 @@ section#depoimentos-secao {
 }
 
 /* Posicionamento dos botões do carousel */
-#depoimentos-secao #anterior {
-    left: 90px;
-}
+#depoimentos-secao #anterior {left: 90px;}
 
-#depoimentos-secao #proximo {
-    right: 90px;
-}
+#depoimentos-secao #proximo {right: 90px;}
 
 /* Estilização da div onde estarão os depoimentos*/
 #depoimentos {
     width: 1000px;
     overflow-x: hidden;
-
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
@@ -357,7 +278,6 @@ section#depoimentos-secao {
     flex-shrink: none;
     flex-grow: none;
     scroll-behavior: smooth;
-
     padding: 30px;
     min-height: 360px;
     min-width: 320px;
@@ -365,22 +285,15 @@ section#depoimentos-secao {
 }
 
 /* Colorização dos cards de depoimento */
-.depoimento:nth-child(3n + 1) {
-    background-color: #F6BF73;
-}
+.depoimento:nth-child(3n + 1) {background-color: #F6BF73;}
 
-.depoimento:nth-child(3n + 2) {
-    background-color: #EBD2AC;
-}
+.depoimento:nth-child(3n + 2) {background-color: #EBD2AC;}
 
-.depoimento:nth-child(3n + 3) {
-    background-color: #FCF4DC;
-}
+.depoimento:nth-child(3n + 3) {background-color: #FCF4DC;}
 
 /* Perfil da pessoa que depôs */
 .perfil-depoimento {
     margin-bottom: 31px;
-
     display: grid;
     grid-template-rows: 29px 21px;
     grid-template-columns: 50px 215px;
@@ -390,7 +303,6 @@ section#depoimentos-secao {
 /* Imagem da pessoa que depôs */
 .imagem-depoimento {
     grid-row: 1 / 3;
-
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -427,24 +339,23 @@ section#depoimentos-secao {
 
 /* estilização do texto que a cliente fez sobre ela mesma */
 section#sobre-mim-texto-container {
+    padding: 20px;
     background-color: white;
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
 /* estilização da sessão que possui o texto do sobre mim */
-section#sobre-mim-texto {
+section.padrao-textos {
     max-width: 770px;
     width: 100%;
 }
 
 /* estilização do título do texto sobre mim */
-section#sobre-mim-texto h1 {
+section.padrao-textos h1 {
     margin: 60px 0 30px 0;
     font-size: 2.3rem;
+    color: #001122;
 }
 
 /* estilização dos paragráfos do texto da sessão sobre mim */
@@ -459,9 +370,6 @@ section#sobre-mim-texto p {
 
 /* estilização do container da imagem do sobre mim*/
 div#imagem-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 20px 0 60px 0;
     font-family: var(--open-sans);
 }
@@ -472,7 +380,6 @@ div#imagem-container img {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    
 }
 
 /*Estilização dos elementos do sobre mim */
@@ -502,30 +409,28 @@ span.margin-bottom-zero{
 /* Sobre o Projeto Texto */
 section#sobre-projeto-texto {
     color: #c4c4c4;
-    background-color: var(--preto-acinzentando);
     text-align: center;
     padding: 20px;
-    height: 470px;
+    min-height: 470px;
 }
+
 /* estilizando titulo */
 section#sobre-projeto-texto h2{
     color: white;
     padding: 40px;
     font-size: 2.3rem;
 }
+
 /* colocando espaço no paragrafo de cima */
-section#sobre-projeto-texto #p2 {
-    margin-top: 22px;
-}
+section#sobre-projeto-texto #p2 {margin-top: 22px;}
+
 /* tamanho dos paragrafos */
-section#sobre-projeto-texto p {
-    font-size: 1.1em;
-}
+section#sobre-projeto-texto p {font-size: 1.1em;}
+
 /* tamanho da caixa de todos os textos */
 section#sobre-projeto-texto div#paragrafos-sobre-projeto {
-    width: 720px;
+    max-width: 720px;
     margin: auto;
-    
 }
 
 /*rodape*/
@@ -533,7 +438,7 @@ section#sobre-projeto-texto div#paragrafos-sobre-projeto {
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 100px 100px 20px 100px;
+    padding: 45px 100px 10px 100px;
 }
 
 /*codigo para separar a primeira parte do rodape*/
@@ -544,13 +449,15 @@ section#sobre-projeto-texto div#paragrafos-sobre-projeto {
 
 .separar1 span {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 /*codigo para ajustar a parte do contato do rodape */
 div.contato{
     width: 25px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     font-size: 17px;
     padding: 10px 0px 10px 0px;
     min-width:12vw;
@@ -559,20 +466,254 @@ div.contato{
 /*codigo para ajustar a parte da localização do rodape */
 div.localizacao{
     width: 25px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-right: 0vw;
     font-size: 17px;
-    padding: 20px 0px 20px 0px;
+    padding: 10px 0px 10px 0px;
     min-width:25vw;
 }
 
 /*linha cinza que divide o rodape*/
-.linha-cinza{
-    border-bottom: 1px solid #ccc;
-}
+.linha-cinza{  border-bottom: 1px solid #ccc;}
 
 /*codigo para separar a segunda parte do rodape*/
 .separar2{
     display: flex;
     justify-content: space-between;
+}
+
+/* codigo para retirar a cor azul do link */
+.icones-sociais a { color: inherit; }
+
+/* codigo para separar os icones do intagram e do linkedin */
+.icones-sociais a:nth-child(1) {margin-right: 5px;}
+
+/* MODAL */
+/* Texto do Modal */
+.termos{
+    width: 100%;
+    margin-right: 50px;
+    z-index: 100;
+    align-items: center;
+    display: flex;
+    z-index: 9999999;
+}
+ 
+/* CheckBox do Modal */
+.checkbox{
+    min-width: 20px;
+    min-height: 20px;
+    margin-left: 90px;
+    margin-right: 10px;
+    z-index: 9999999;
+}
+ 
+/* Conteiner do Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(33, 33, 33, 0.7);
+    transition: all 0.4s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: none;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 9999999;
+}
+
+/* Titulo do Modal */  
+.modal h1{
+    padding-left: 10px;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 32px;
+    line-height: 1.2;
+    text-align: center;
+    z-index: 9999999;
+}
+
+/* Animação do Modal */
+.content{ 
+    scale: 0.8;
+    -webkit-animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    z-index: 9999999;
+} 
+  
+@keyframes scale-in {
+0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+}
+  
+/* Container do Formulario */
+.form {
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+    z-index: 9999999;
+}
+  
+/* Tamanho dos inputs do Formulario */
+.form label, .form input, .form textarea, .form button {
+    display: block;
+    width: 100%;
+    z-index: 9999999;
+}
+ 
+/* Tamanho dos textos do Formulario */
+.form label {
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    z-index: 9999999;
+}
+  
+/* Tamanhos dos inputs do Formulario 2.0 */
+.form input, .form textarea {
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-sizing: unset;
+    transition: border-color, box-shadow 0.2s;
+    z-index: 9999999;
+}
+
+/* Tamanho do textarea */
+.form textarea {
+    min-height: 13rem;
+    resize: vertical;
+    z-index: 9999999;
+}
+ 
+/* Bordas apos passar o muse por cima dos inputs */
+.form  input:hover, .form input:focus, .form textarea:hover, .form textarea:focus {
+    outline: none;
+    border-color: #F4AC48;
+    box-shadow: 0 0 0 3px #FFD599;
+    z-index: 9999999;
+}
+
+/* Tamanho dos termos */
+.termos .checkbox {
+    width: 10px;
+    z-index: 9999999;
+}
+  
+/* Estilização do botão de enviar */
+.form button {
+    display: block;
+    margin-left: 15px;
+    padding: 10px;
+    background: #121211;
+    color: #fff;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 9999999;
+}
+  
+/* Animação do botão apos passar o mouse */
+.form button:hover, .form button:focus {
+    outline: none;
+    background: #FFD599;
+    z-index: 9999999;
+}
+
+/* Botão de fechar o modal "X" */
+.modal__close {
+    position: absolute;
+    transform: scale(1.5);
+    top: 20px;
+    left: 500px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 9999999;
+}
+
+
+
+/*Celular*/
+@media screen and (max-width: 768px){
+    :root {
+        font-size: 14px;
+    }
+
+    nav#navbar {
+        flex-direction: column;
+    }
+
+    nav#navbar #titulo-menu {
+        border-bottom: 1px solid var(--dourado);
+    }
+    
+    div#elementos {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    div#elementos span#burguer {
+        display: block;
+    }
+
+    div#elementos a {
+        font-size: 1.2em;
+    }
+
+    
+
+    .container {
+        margin: 50px;
+        padding: 10px;
+        gap: 30px;
+    }
+
+    .texto {
+        max-width: 200px;
+    }
+
+    .imagem img {
+        max-width: 200px;
+    }
+
+    div#container-sobreprojeto {
+        justify-content: flex-start;
+    }
+
+    section#depoimentos-secao {
+        padding: 20px 20px 50px 20px;
+    }
+
+    #depoimentos-secao button#anterior {
+        left: 10px;
+    }
+
+    #depoimentos-secao button#proximo {
+        right: 10px;
+    }
+
+    #depoimentos-secao div#depoimentos {
+        padding: 57.5px;
+        width: 650px;
+        gap: 57.5px;
+    }
 }
