@@ -208,6 +208,7 @@ div#container-sobremim {
     cursor: pointer;
 }
 
+
 /* hover do botão ler mais */
 .btn-lermais:hover {
     transform: scale(1.05);
@@ -645,7 +646,7 @@ div.localizacao{
 }
 
 /*Celular*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 600px) {
 
     :root {
         font-size: 14px;
@@ -674,11 +675,13 @@ div.localizacao{
 
     div#textos-imagem h1 {
         font-size: 1.4em;
+        padding: 0 5px;
     }
 
     div#textos-imagem p {
         font-size: 1.2em;
         max-width: 300px;
+        padding: 0 10px;
     }
 
     .secao {
@@ -687,6 +690,7 @@ div.localizacao{
     }
 
     .container {
+        margin: 0 auto;
         width: 100%;
         margin: 50px;
         padding: 10px;
@@ -762,6 +766,153 @@ div.localizacao{
 }
 
 /*Tablet*/
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 601px) and (max-width: 750px) {
+
+    div#textos-imagem h1 {
+        font-size: 1.9em;
+        padding: 0 10px;
+    }
+
+    #caixa-paragrafo {
+        max-width: 500px;
+        font-size: .9em;
+    }
     
+    .container img {
+        max-width: 210px;
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        min-height: 400px;
+        max-width: 400px;
+        gap: 30px;
+    }
+    
+    .secao {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 500px;
+    }
+
+    #depoimentos-secao {
+        min-width: 600px;
+        max-width: 600px;
+        padding: 0;
+    }
+
+    #depoimentos {
+        width: 500px;
+    }
+
+    .depoimento {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .texto h2 {
+        font-size: 2.1rem;
+        min-width: 200px;
+    }
+
+    #container-sobreprojeto {
+        justify-content: space-between;
+    }
+
+    #container-sobreprojeto .texto {
+        min-width: 200px;
+    }
+
+    .texto {
+        min-width: 190px;
+        max-width: 190px;
+        font-size: 1rem;
+    }
+
+    .texto p {
+        max-width: 200px;
+    }
+}
+
+/*Telas intermediárias*/
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+     div#textos-imagem h1 {
+        font-size: 2.1em;
+        padding: 0 10px;
+    }
+
+    #caixa-paragrafo {
+        max-width: 500px;
+        font-size: .9em;
+    }
+    
+    .container img {
+        max-width: 310px;
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        min-height: 400px;
+        min-width: 600px;
+        max-width: 600px;
+        gap: 50px;
+    }
+    
+    .secao {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 700px;
+    }
+
+    section#depoimentos-secao {
+        padding: 50px 0;
+        min-width: 72px;
+        max-width: 720px;
+    }
+
+    #depoimentos-secao button#anterior {
+        left: 0;
+    }
+
+    #depoimentos-secao button#proximo {
+        right: 0;
+    }
+
+    #depoimentos {
+        min-width: 700px;
+        max-width: 700px;
+        gap: 20px;
+    }
+
+    .depoimento {
+        min-width: 220px;
+        max-width: 220px;
+    }
+
+    .texto h2 {
+        font-size: 2.3rem;
+        min-width: 200px;
+    }
+
+    #container-sobreprojeto {
+        justify-content: center;
+    }
+
+    #container-sobreprojeto .texto {
+        min-width: 250px;
+    }
+
+    .texto {
+        min-width: 190px;
+        max-width: 419px;
+        font-size: 1rem;
+    }
+
+    .texto p {
+        font-size: 1.2rem;
+        max-width: 250px;
+    }
+
 }
