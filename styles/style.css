@@ -134,6 +134,10 @@ section#imagem img {
     opacity: 0.5;
 }
 
+.mobile {
+    display: none;
+}
+
 /* Definindo position absolute para que os textos fiquem à frente da imagem */
 div#textos-imagem {position: absolute;}
 

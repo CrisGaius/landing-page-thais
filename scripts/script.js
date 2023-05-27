@@ -1,12 +1,15 @@
 // Seleção da imagem principal
 if (window.innerWidth <= 768) {
-  document.querySelector('section#imagem img').src = '../images/imagem-thais-falando.jpeg';
+  document.querySelector('.desktop').style.display = 'none';
+  document.querySelector('.mobile').style.display = 'block';
 }
 window.addEventListener('resize', () => {
   if (window.innerWidth <= 768) {
-    document.querySelector('section#imagem img').src = '../images/imagem-thais-falando.jpeg';
+    document.querySelector('.desktop').style.display = 'none';
+    document.querySelector('.mobile').style.display = 'block';
   } else {
-    document.querySelector('section#imagem img').src = '../images/imagem2-copy-alterada-nova.jpeg';
+    document.querySelector('.mobile').style.display = 'none';
+    document.querySelector('.desktop').style.display = 'block';
   }
 })
 
