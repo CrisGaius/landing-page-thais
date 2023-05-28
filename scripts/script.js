@@ -52,17 +52,19 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
 }));
 
 // Abrindo Modal
-const botao = document.getElementById('btn-contato');
-const modal = document.getElementsByClassName('modal')[0];
-let conteudo = document.getElementsByClassName('content')[0];
+const botao = document.getElementById('btn-contato'); // pegando o botão do site que vai abrir o modal
+const modal = document.getElementsByClassName('modal')[0]; //pegando o modal completo
+let conteudo = document.getElementsByClassName('content')[0]; //pegando o conteúdo do modal
 
-botao.addEventListener('click', function abrirModal() {
-    modal.style.display = 'flex';
+//Ao clicar no botão
+botao.addEventListener('click', function abrirModal() { 
+    modal.style.display = 'flex'; // modal irá aparecer
     conteudo = document.getElementsByClassName('content')[0];
 })
 
-const fechar = document.getElementsByClassName('modal__close')[0];
+const fechar = document.getElementsByClassName('modal__close')[0]; //pegar o "X" que fecha o modal
 
+//ao clicar no X que fecha o botão
 fechar.addEventListener('click', function fecharModal () {
-    modal.style.display = 'none';
+    modal.style.display = 'none'; //fazemos o modal completo desaparecer
 });

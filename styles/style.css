@@ -27,6 +27,7 @@ body {
     background-color: var(--preto-acinzentado);
 }
 
+/*Criando uma classe para evitar a repetição dessas três propriedades*/
 .flex-container {
     display: flex;
     justify-content: center;
@@ -164,6 +165,7 @@ div#textos-imagem p {
     font-weight: 500;
 }
 
+/*Classe que envolve tanto o sobre mim quanto o sobre o projeto*/
 .container {
     gap: 81px;
     color: white;
@@ -649,7 +651,7 @@ div.localizacao{
     z-index: 9999999;
 }
 
-/*Celular*/
+/* Media query para ajustar as propriedades vistas anteriormente para celular*/
 @media screen and (max-width: 620px) {
 
     :root {
@@ -769,7 +771,7 @@ div.localizacao{
     }
 }
 
-/*Tablet*/
+/* Media query para ajustar as propriedades vistas anteriormente para telas intermediárias*/
 @media screen and (min-width: 621px) and (max-width: 750px) { /*601PX */
 
     div#textos-imagem h1 {
@@ -839,7 +841,7 @@ div.localizacao{
     }
 }
 
-/*Telas intermediárias*/
+/* Media query para ajustar as propriedades vistas anteriormente para tablets*/
 @media screen and (min-width: 751px) and (max-width: 1100px) {
      div#textos-imagem h1 {
         font-size: 2.1em;
