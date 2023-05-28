@@ -650,7 +650,7 @@ div.localizacao{
 }
 
 /*Celular*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
 
     :root {
         font-size: 14px;
@@ -770,7 +770,7 @@ div.localizacao{
 }
 
 /*Tablet*/
-@media screen and (min-width: 601px) and (max-width: 750px) {
+@media screen and (min-width: 621px) and (max-width: 750px) { /*601PX */
 
     div#textos-imagem h1 {
         font-size: 1.9em;
