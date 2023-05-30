@@ -535,7 +535,7 @@ div.localizacao{
 .checkbox{
     min-width: 20px;
     min-height: 20px;
-    margin-left: 90px;
+    margin-left: 60px;
     margin-right: 10px;
 }
 
@@ -557,13 +557,12 @@ div.localizacao{
 
 /* Titulo do Modal */  
 .modal h1{
-    padding-left: 10px;
     font-size: 48px;
     color: #fff;
-    margin-bottom: -50px;
+    margin-bottom: -70px;
     margin-top: 100px;
     line-height: 1.2;
-    transform: scale(.8);
+    transform: scale(.7);
     text-align: center;
 }
 
@@ -572,7 +571,7 @@ div.localizacao{
     width: 100%;
     max-width: 32rem;
     font-size: 1.125rem;
-    transform: scale(.8);
+    transform: scale(.7);
 }
   
 /* Tamanho dos inputs do Formulario */
@@ -596,7 +595,6 @@ div.localizacao{
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 8px;
-    box-sizing: unset;
     transition: border-color, box-shadow 0.2s;
 }
 
@@ -621,7 +619,7 @@ div.localizacao{
 /* Estilização do botão de enviar */
 .form button {
     display: block;
-    margin-left: 15px;
+    margin-left: 3px;
     padding: 10px;
     background: #121211;
     color: #fff;
@@ -643,8 +641,8 @@ div.localizacao{
 .modal__close {
     position: absolute;
     transform: scale(2);
-    top: -62px;
-    left: 460px;
+    top: -80px;
+    left: 435px;
     color: red;
     text-decoration: none;
 }
