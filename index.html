@@ -25,7 +25,7 @@
             </nav>
 
             <section id="imagem" class="flex-container"> <!--Sessão aonde será colocada a imagem de fundo de Thaís explicando-->
-                <img src="./images/thais-image-site.jpg" class="desktop" alt="Foto de Thaís falando">
+                <img src="./images/imagem-principal-desktop.jpeg" class="desktop" alt="Foto de Thaís falando">
                 <img src="./images/imagem-principal-mobile.jpeg" class="mobile" alt="Foto de Thaís falando">
                 <div id="textos-imagem"> <!--Div para os textos que ficam à frente da imagem-->
                     <h1>"A Decisão de Mudar, Muda Tudo!"</h1>
@@ -44,7 +44,7 @@
             <!-- Container maior que guarda texto e imagem -->
             <div id="container-sobremim" class="flex-container container">
                 <div class="imagem">
-                    <img src="images/foto-thais-perfil.jpg" alt="Foto de Thaís sorrindo">
+                    <img src="images/foto-sobre-mim.png" alt="Foto de Thaís sorrindo">
                 </div>
                 <div class="texto">
                     <h2>Sobre mim</h2>
@@ -201,14 +201,15 @@
             </ul>
         </div>
     </footer>
-    <div id="btn-contato" class="modal">
+    <div id="fade" class="hide"></div>
+    <div id="btn-contato" class="modal hide">
 
         <!-- Conteudo do Modal -->
         <div class="content">
     
             <h1>Entre em Contato</h1>
     
-            <form action="https://formsubmit.co/vini.nelso@gmail.com" method="post" id="demo-modal" class="form">
+            <form action="https://formsubmit.co/vini.nelso@gmail.com" method="POST" id="demo-modal" class="form">
                 <!-- Input do Nome -->
                 <label for="name">Nome</label>
                 <input type="text" name="name" id="name" placeholder="Seu nome" required>
@@ -223,27 +224,30 @@
     
                 <!-- Input do Mensagem -->
                 <label for="mensage">Mensagem</label>
-                <textarea name="mensage" id="mensage" placeholder="Digite aqui sua Mensagem" ></textarea>
+                <textarea name="mensage" id="Mensagem" placeholder="Digite aqui sua Mensagem" required></textarea>
     
                 <input type="hidden" name="_captcha" value="false">
     
                     <!-- Checkbox para termos de dados -->
                     <div class="termos">
-                        <input type="checkbox" name="checkbox" class="checkbox" required>
+                        <input type="checkbox" name="checkbox" class="checkbox" id="checkbox" required>
                         <label for="checkbox" style="margin-bottom: 14px;">Concordo em enviar meus dados.</label>
                     </div>
     
                 <!-- Botão para enviar dados -->
-                <button type="submit">Enviar</button>
-    
-                <!-- Redirecionando para pagina de inicio -->
-                <input type="hidden" name="_next" value="#">
-    
+                <button type="submit" name="submit" value="submit">Enviar</button>
+
                 <!--X para fechar modal-->
                 <a href="#" id="X" class="modal__close" width="50px" >&times;</a>
-    
+
+                <input type="hidden" name="_subject" value="Nova Mensagem do site!">
             </form>
         </div>
+        <div id="container-loader">
+            <div class="custom-loader"></div>
+        </div>
     </div>
+
+    
 </body>
 </html>

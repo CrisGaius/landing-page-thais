@@ -493,25 +493,52 @@ div.localizacao{
 .icones-sociais a:nth-child(1) {margin-right: 5px;}
 
 /* MODAL */
-/* Texto do Modal */
+/*Animação do modal*/
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+  
+/*Animação do modal*/
+
+  #fade,
+  .modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /*Escondendo modal*/
+
+  .modal.hide,
+  #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Texto do Modal */
 .termos{
     width: 100%;
     margin-right: 50px;
     z-index: 100;
     align-items: center;
     display: flex;
-    z-index: 9999999;
 }
- 
+
+
 /* CheckBox do Modal */
 .checkbox{
     min-width: 20px;
     min-height: 20px;
     margin-left: 90px;
     margin-right: 10px;
-    z-index: 9999999;
 }
- 
+
 /* Conteiner do Modal */
 .modal {
     position: fixed;
@@ -522,13 +549,10 @@ div.localizacao{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(33, 33, 33, 0.7);
-    transition: all 0.4s;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: none;
-    opacity: 1;
-    pointer-events: all;
-    z-index: 9999999;
+    z-index: 10;
+    width: 433px;
+    margin: auto;
 }
 
 /* Titulo do Modal */  
@@ -536,44 +560,25 @@ div.localizacao{
     padding-left: 10px;
     font-size: 48px;
     color: #fff;
-    margin-bottom: 32px;
+    margin-bottom: -50px;
+    margin-top: 100px;
     line-height: 1.2;
+    transform: scale(.8);
     text-align: center;
-    z-index: 9999999;
 }
 
-/* Animação do Modal */
-.content{ 
-    scale: 0.8;
-    -webkit-animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    z-index: 9999999;
-} 
-  
-@keyframes scale-in {
-0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-}
-100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-}
-}
-  
 /* Container do Formulario */
 .form {
     width: 100%;
     max-width: 32rem;
     font-size: 1.125rem;
-    z-index: 9999999;
+    transform: scale(.8);
 }
   
 /* Tamanho dos inputs do Formulario */
 .form label, .form input, .form textarea, .form button {
     display: block;
     width: 100%;
-    z-index: 9999999;
 }
  
 /* Tamanho dos textos do Formulario */
@@ -581,7 +586,7 @@ div.localizacao{
     color: #fff;
     line-height: 1;
     margin-bottom: 0.5rem;
-    z-index: 9999999;
+    
 }
   
 /* Tamanhos dos inputs do Formulario 2.0 */
@@ -593,14 +598,12 @@ div.localizacao{
     border-radius: 8px;
     box-sizing: unset;
     transition: border-color, box-shadow 0.2s;
-    z-index: 9999999;
 }
 
 /* Tamanho do textarea */
 .form textarea {
     min-height: 13rem;
     resize: vertical;
-    z-index: 9999999;
 }
  
 /* Bordas apos passar o muse por cima dos inputs */
@@ -608,13 +611,11 @@ div.localizacao{
     outline: none;
     border-color: #F4AC48;
     box-shadow: 0 0 0 3px #FFD599;
-    z-index: 9999999;
 }
 
 /* Tamanho dos termos */
 .termos .checkbox {
     width: 10px;
-    z-index: 9999999;
 }
   
 /* Estilização do botão de enviar */
@@ -630,25 +631,22 @@ div.localizacao{
     border-radius: 8px;
     cursor: pointer;
     transition: 0.2s;
-    z-index: 9999999;
 }
   
 /* Animação do botão apos passar o mouse */
 .form button:hover, .form button:focus {
     outline: none;
     background: #FFD599;
-    z-index: 9999999;
 }
 
 /* Botão de fechar o modal "X" */
 .modal__close {
     position: absolute;
-    transform: scale(1.5);
-    top: 20px;
+    transform: scale(2);
+    top: -62px;
     left: 460px;
-    color: #fff;
+    color: red;
     text-decoration: none;
-    z-index: 9999999;
 }
 
 /* Media query para ajustar as propriedades vistas anteriormente para celular*/
@@ -922,3 +920,22 @@ div.localizacao{
     }
 
 }
+
+div#container-loader {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-loader {
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+    border:8px solid;
+    border-color:#8d7048 #0000;
+    animation:s1 0.5s infinite;
+  }
+  @keyframes s1 {to{transform: rotate(.5turn)}}

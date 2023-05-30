@@ -51,20 +51,57 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
   });
 }));
 
-// Abrindo Modal
-const botao = document.getElementById('btn-contato'); // pegando o botão do site que vai abrir o modal
-const modal = document.getElementsByClassName('modal')[0]; //pegando o modal completo
-let conteudo = document.getElementsByClassName('content')[0]; //pegando o conteúdo do modal
+// // Abrindo Modal
+// const botao = document.getElementById('btn-contato'); // pegando o botão do site que vai abrir o modal
+// const modal = document.getElementsByClassName('modal')[0]; //pegando o modal completo
+// let conteudo = document.getElementsByClassName('content')[0]; //pegando o conteúdo do modal
+// const x = document.getElementById('X');
 
-//Ao clicar no botão
-botao.addEventListener('click', function abrirModal() { 
-    modal.style.display = 'flex'; // modal irá aparecer
-    conteudo = document.getElementsByClassName('content')[0];
-})
+// //Ao clicar no botão
+// botao.addEventListener('click', function abrirModal() { 
+//     modal.style.display = 'flex'; // modal irá aparecer
+//     conteudo = document.getElementsByClassName('content')[0];
+// })
 
-const fechar = document.getElementsByClassName('modal__close')[0]; //pegar o "X" que fecha o modal
+// const fechar = document.getElementsByClassName('modal__close')[0]; //pegar o "X" que fecha o modal
 
-//ao clicar no X que fecha o botão
-fechar.addEventListener('click', function fecharModal () {
-    modal.style.display = 'none'; //fazemos o modal completo desaparecer
+// //ao clicar no X que fecha o botão
+// fechar.addEventListener('click', function fecharModal () {
+//     modal.style.display = 'none'; //fazemos o modal completo desaparecer
+//     conteudo.classList.toggle('animar')
+// });
+
+const openModalButton = document.querySelector("#btn-contato");
+const closeModalButton = document.querySelector(".modal__close");
+const modal = document.querySelector(".modal");
+const fade = document.querySelector("#fade");
+
+const toggleModal = () => {
+  modal.classList.toggle("hide");
+  fade.classList.toggle("hide");
+};
+
+[openModalButton, closeModalButton, fade].forEach((el) => {
+  el.addEventListener("click", () => toggleModal());
 });
+
+var botaoConfirmarModal = document.getElementsByName('submit')[0]
+
+var loader = document.getElementById('container-loader')
+
+botaoConfirmarModal.addEventListener('click', () => {
+  var inputNome = document.getElementById('name').value
+  var inputEmail = document.getElementById('email').value
+  var inputTelefone = document.getElementById('contato').value
+  var inputMensagem = document.getElementById('Mensagem').value
+  var checkbox = document.getElementById('checkbox')
+
+  if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
+
+    if (inputEmail.includes('@') && inputEmail.length > 3) {
+      loader.style.display = 'block'
+    }
+
+  }
+
+})
