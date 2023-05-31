@@ -248,7 +248,7 @@
 
             <h1>Entre em Contato</h1>
 
-            <form action="https://formsubmit.co/thaismelopd@gmail.com" method="POST" id="demo-modal" class="form"
+            <form action="https://formsubmit.co/kakas46505@vaband.com" method="POST" id="demo-modal" class="form"
                 onsubmit="return submitUserForm();">
                 <!-- Input do Nome -->
                 <label for="name">Nome</label>
@@ -290,7 +290,23 @@
                     if (response.length == 0) {
                         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Por favor, complete a verificação.</span>';
                         return false;
+                    } else {
+                        var inputNome = document.getElementById('name').value
+                        var inputEmail = document.getElementById('email').value
+                        var inputTelefone = document.getElementById('contato').value
+                        var inputMensagem = document.getElementById('Mensagem').value
+                        var checkbox = document.getElementById('checkbox')
+
+                        var loader = document.getElementById('container-loader')
+
+                        if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
+
+                            if (inputEmail.includes('@.') && inputEmail.length > 3) {
+                                loader.style.display = 'block'
+                            }
+                        }
                     }
+
                     return true;
                 }
 

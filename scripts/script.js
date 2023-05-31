@@ -85,24 +85,24 @@ const toggleModal = () => {
   el.addEventListener("click", () => toggleModal());
 });
 
-var botaoConfirmarModal = document.getElementsByName('submit')[0]
+// var botaoConfirmarModal = document.getElementsByName('submit')[0]
 
-var loader = document.getElementById('container-loader')
+// var loader = document.getElementById('container-loader')
 
-botaoConfirmarModal.addEventListener('click', () => {
-  var inputNome = document.getElementById('name').value
-  var inputEmail = document.getElementById('email').value
-  var inputTelefone = document.getElementById('contato').value
-  var inputMensagem = document.getElementById('Mensagem').value
-  var checkbox = document.getElementById('checkbox')
+// botaoConfirmarModal.addEventListener('click', () => {
+//   var inputNome = document.getElementById('name').value
+//   var inputEmail = document.getElementById('email').value
+//   var inputTelefone = document.getElementById('contato').value
+//   var inputMensagem = document.getElementById('Mensagem').value
+//   var checkbox = document.getElementById('checkbox')
 
-  if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
+//   if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
 
-    if (inputEmail.includes('@') && inputEmail.length > 3) {
-      loader.style.display = 'block'
-    }
+//     if (inputEmail.includes('@') && inputEmail.length > 3) {
+//       loader.style.display = 'block'
+//     }
 
-  }
+//   }
 
-})
+// })
 
