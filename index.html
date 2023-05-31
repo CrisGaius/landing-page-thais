@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/c687b2a461.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="./scripts/script.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Thaís Melo</title>
 </head>
+
 <body>
     <main>
         <header id="cabecalho"> <!--Cabeçalho-->
             <nav id="navbar" class="flex-container"> <!-- barra de navegação do site -->
-                <a href="https://www.instagram.com/thaismelopd/" id="titulo-menu" class="gradiente" target="_blank"> <!--Link para o instagram da cliente-->
+                <a href="https://www.instagram.com/thaismelopd/" id="titulo-menu" class="gradiente" target="_blank">
+                    <!--Link para o instagram da cliente-->
                     <h1><abbr title="Logo">Thaís Melo</abbr></h1>
                 </a>
                 <div id="elementos"> <!-- Partes da página-->
@@ -24,12 +29,13 @@
                 </div>
             </nav>
 
-            <section id="imagem" class="flex-container"> <!--Sessão aonde será colocada a imagem de fundo de Thaís explicando-->
+            <section id="imagem" class="flex-container">
+                <!--Sessão aonde será colocada a imagem de fundo de Thaís explicando-->
                 <img src="./images/imagem-principal-desktop.jpeg" class="desktop" alt="Foto de Thaís falando">
                 <img src="./images/imagem-principal-mobile.jpeg" class="mobile" alt="Foto de Thaís falando">
                 <div id="textos-imagem"> <!--Div para os textos que ficam à frente da imagem-->
                     <h1>"A Decisão de Mudar, Muda Tudo!"</h1>
-                    
+
                     <div id="caixa-paragrafo"> <!--Div para delimitar o espaço ocupado pelo parágrafo-->
                         <p>Decidir mudar é o grande começo para uma nova vida.</p>
                     </div>
@@ -37,148 +43,179 @@
             </section>
         </header> <!--Fim do cabeçalho-->
 
-    <!-- Bloco maior que posiciona os 3 topicos -->
-    <section id="bloco-sobre-mim-e-pd-school">
-        <!-- Inicio do sobre mim -->
-        <section class="flex-container secao">
-            <!-- Container maior que guarda texto e imagem -->
-            <div id="container-sobremim" class="flex-container container">
-                <div class="imagem">
-                    <img src="images/foto-sobre-mim.png" alt="Foto de Thaís sorrindo">
+        <!-- Bloco maior que posiciona os 3 topicos -->
+        <section id="bloco-sobre-mim-e-pd-school">
+            <!-- Inicio do sobre mim -->
+            <section class="flex-container secao">
+                <!-- Container maior que guarda texto e imagem -->
+                <div id="container-sobremim" class="flex-container container">
+                    <div class="imagem">
+                        <img src="images/foto-sobre-mim.png" alt="Foto de Thaís sorrindo">
+                    </div>
+                    <div class="texto">
+                        <h2>Sobre mim</h2>
+                        <p>Queria convidar você a conhecer um pouco do que eu faço.</p>
+                        <div><a href="#sobre-mim-texto" style="color: black"><button class="btn-lermais"> Ler
+                                    Mais</button></a></div>
+                    </div>
                 </div>
-                <div class="texto">
-                    <h2>Sobre mim</h2>
-                    <p>Queria convidar você a conhecer um pouco do que eu faço.</p>
-                    <div><a href="#sobre-mim-texto" style="color: black"><button class="btn-lermais"> Ler Mais</button></a></div>
+
+
+            </section>
+            <!-- Início da seção para a parte SOBRE O PROJETO -->
+            <!-- CSS: Da linha 210 até a 238 -->
+            <section class="flex-container secao">
+                <div id="container-sobreprojeto" class="flex-container container">
+
+                    <!-- Texto SOBRE O PROJETO que fica ao lado da imagem -->
+                    <div class="texto">
+                        <h2>Sobre o Projeto</h2>
+                        <p>Queria convidar vocês a conhecer um pouco do que faço.</p>
+
+                        <div><a href="#sobre-projeto-texto"><button class="btn-lermais">Ler Mais</button></a></div>
+                    </div>
+
+                    <!-- Imagem SOBRE O PROJETO-->
+                    <div class="imagem">
+                        <img src="images/foto-sobre-projeto.png" alt="Thaís em uma reunião">
+                    </div>
+
                 </div>
-            </div>
-            
-          
+            </section>
+            <!-- Fim da seção para a parte SOBRE O PROJETO-->
+
+
+
+            <section id="depoimentos-secao" class="flex-container secao"> <!-- Sessão de depoimentos -->
+                <!-- Botões do carousel -->
+                <button id="anterior" class="carousel-button flex-container" type="button">&lt;</button>
+                <button id="proximo" class="carousel-button flex-container" type="button">&gt;</button>
+                <!-- Lista de depoimentos -->
+                <div id="depoimentos">
+                    <!-- Item da lista de depoimentos -->
+                    <div class="depoimento">
+                        <!-- Perfil da pessoa que fez o depoimento -->
+                        <div class="perfil-depoimento">
+                            <img class="imagem-depoimento" src="./images/thaynara-rudner-foto.jpg">
+                            <p class="nome-depoimento">Thaynara Rudner</p>
+                            <p class="instagram-depoimento">@thaynararudner</p>
+                        </div>
+                        <!-- O depoimento -->
+                        <p class="comentario-depoimento">Thaís, estou amando ler cada coisa que você deixa aqui.
+                            Enquanto estava lendo, me enxergava automaticamente em cada palavra. Admiro demais tua força
+                            e determinação. E é isso que estou buscando a cada dia.</p>
+                    </div>
+                    <div class="depoimento">
+                        <div class="perfil-depoimento">
+                            <img class="imagem-depoimento" src="images/nilsien-simas-foto.jpg">
+                            <p class="nome-depoimento">Nilsien Simas</p>
+                            <p class="instagram-depoimento">@nilsiensimas</p>
+                        </div>
+                        <p class="comentario-depoimento">Maravilhosa!!! Pode ter certeza que você fez parte da minha
+                            transformação enquanto profissional. Eu sou muito grata! Eu sei que aí tem muito propósito e
+                            carinho ❤️</p>
+                    </div>
+                    <div class="depoimento">
+                        <div class="perfil-depoimento">
+                            <img class="imagem-depoimento" src="images/exter-lira-foto.jpg">
+                            <p class="nome-depoimento">Ester Lira</p>
+                            <p class="instagram-depoimento">@ex.ter.lira</p>
+                        </div>
+                        <p class="comentario-depoimento">Foi perfeita a palestra!!! Até agora pensando em tudo o que
+                            rolou ontem, obrigada por compartilhar conosco a sua caminhanda ❤️</p>
+                    </div>
+                    <div class="depoimento">
+                        <div class="perfil-depoimento">
+                            <img class="imagem-depoimento" src="./images/adryelle-franca-foto.jpg">
+                            <p class="nome-depoimento">Adryelle Maria</p>
+                            <p class="instagram-depoimento">@adryellefranca</p>
+                        </div>
+                        <p class="comentario-depoimento">Pessoa maravilhosa!!!!! Já conhecia por ver ela no insta da
+                            agência mas conhecendo pessoalmente ela é uma fofa!!!!!! Gratidão pela palestra sua
+                            linda!!!!</p>
+                    </div>
+                    <div class="depoimento">
+                        <!-- Perfil da pessoa que fez o depoimento -->
+                        <div class="perfil-depoimento">
+                            <img class="imagem-depoimento" src="./images/gleyce-oliva-foto.jpg">
+                            <p class="nome-depoimento">Gleyce Oliva</p>
+                            <p class="instagram-depoimento">@gleyceoliva</p>
+                        </div>
+                        <!-- O depoimento -->
+                        <p class="comentario-depoimento">A partir daqui, desejo apenas que muito mais pessoas consigam
+                            ter a oportunidade de participar da PD SCHOOL pois pela minha própria experiência, essa, com
+                            certeza é, uma das decisões que mudam a vida!</p>
+                    </div>
+                    <div class="depoimento">
+                        <div class="perfil-depoimento">
+                            <img class="imagem-depoimento" src="./images/leandro-gomes-foto.jpg">
+                            <p class="nome-depoimento">Leandro Gomes</p>
+                            <p class="instagram-depoimento">@eujleandro</p>
+                        </div>
+                        <p class="comentario-depoimento">Muito obrigado pela oportunidade, pela experiência e por tudo
+                            que vocês da PD SCHOOL nos proporcionaram. Um ciclo se encerra, mas ficam as experiências
+                            que farão a diferença na nossa vida pessoal e profissional. ❤️👏</p>
+                    </div>
+                </div>
+            </section>
+
         </section>
-        <!-- Início da seção para a parte SOBRE O PROJETO -->
-        <!-- CSS: Da linha 210 até a 238 -->
-        <section class="flex-container secao">
-            <div id="container-sobreprojeto" class="flex-container container">
-                
-                <!-- Texto SOBRE O PROJETO que fica ao lado da imagem -->
-                <div class="texto">
-                    <h2>Sobre o Projeto</h2>
-                    <p>Queria convidar vocês a conhecer um pouco do que faço.</p>
-                    
-                    <div><a href="#sobre-projeto-texto"><button class="btn-lermais">Ler Mais</button></a></div>
-                </div>
 
-                <!-- Imagem SOBRE O PROJETO-->
-                <div class="imagem">
-                    <img src="images/foto-sobre-projeto.png" alt="Thaís em uma reunião">
+        <!--Texto com o sobre mim completo da cliente.-->
+        <section id="sobre-mim-texto-container" class="flex-container">
+            <!--Texto contendo algumas informações sobre o cliente-->
+            <section id="sobre-mim-texto" class="padrao-textos">
+                <h1>Sobre Mim</h1>
+                <p>Fiz várias coisas durante esses poucos anos de vida que tenho. Fui proprietária de loja, professora,
+                    vendedora, coordenadora, gerente… a verdade é que sempre me virei do jeito que dava porque não sabia
+                    bem o que queria. E como pra quem não sabe onde ir, qualquer caminho serve, andei por todos os
+                    lados. </p>
+                <p>Escutei meu coração e resolvi entrar em uma outra área. Conheci pessoas que viram potencial em mim e
+                    me deram oportunidade para trilhar uma trajetória na direção certa.</p>
+                <p>Me encontro, atualmente, em um caminho que tenho orgulho de falar sobre. Tenho uma empresa com mais
+                    dois sócios que se transformou num grupo - onde somos: agência de marketing, empresa de consultoria
+                    para negócios, escola, empresa de tecnologia e projeto social.</p>
+                <p>Além disso, gosto de dividir minha visão de mundo e compartilhar minha vida. Sou fã de leitura,
+                    apaixonada por café e trabalho todos os dias pra ser uma pessoa melhor pra mim mesma e para as
+                    pessoas que estão ao meu redor. Acredito em Deus e busco compreender a palavra pois a
+                    espiritualidade é uma esfera da vida que busco evoluir.</p>
+                <p>Prezo por uma rotina com significado e bons hábitos porque não quero deixar de lado os 5 anos que
+                    estudei na área de saúde. Então, sempre que tiver abertura para falar sobre saúde, estarei fazendo
+                    minha parte.</p>
+                <p>Hoje consigo ter clareza do meu propósito profissional e quero ajudar outras pessoas a encontrarem o
+                    seu. Vamos nessa?”</p>
+                <!--Informações sobre o instagram da cliente-->
+                <div id="imagem-container" class="flex-container">
+                    <a href="https://www.instagram.com/thaismelopd/" target="_blank"><img src="images/foto-perfil.png"
+                            alt="Foto de perfil do instagram de Thaís" id="foto-perfil-insta"></a>
+                    <div id="elementos-perfil">
+                        <span class="margin-bottom-zero" id="nome-thais">Thaís Melo</span>
+                        <a href="https://www.instagram.com/thaismelopd/" target="_blank"><span
+                                class="margin-bottom-zero">@thaismelopd</span></a>
+                    </div>
                 </div>
-                
+            </section>
+        </section>
+        <!-- Section sobre o projeto -->
+        <section id="sobre-projeto-texto">
+            <h2>Sobre o Projeto</h2>
+            <!-- div que junta todos os paragrafos -->
+            <div id="paragrafos-sobre-projeto" class="padrao-textos">
+                <p>A mentoria é um ambiente para falarmos sobre: carreira, negócio, empreendedorismo, mentalidade… mas
+                    principalmente, sobre você.</p>
+                <p id="p2">A gente acaba ficando tão preocupado com o extraordinário que esquece das coisas ordinárias.
+                    O ser humano é o fator principal de tudo que conversamos aqui.</p>
+                <p>Meu principal objetivo é ajudar pessoas a encontrarem sentido em suas carreiras através do
+                    autoconhecimento. Faço isso pois o caminhas das pedras eu já trilhei. Me coloco como mentora desse
+                    processo pra que vocês não tenham que passar o tempo que passei pra descobrir o que realmente
+                    querem.</p>
             </div>
         </section>
-        <!-- Fim da seção para a parte SOBRE O PROJETO-->
-
-
-        
-        <section id="depoimentos-secao" class="flex-container secao"> <!-- Sessão de depoimentos -->
-            <!-- Botões do carousel -->
-            <button id="anterior"  class="carousel-button flex-container" type="button">&lt;</button>
-            <button id="proximo"  class="carousel-button flex-container" type="button">&gt;</button>
-            <!-- Lista de depoimentos -->
-            <div id="depoimentos">
-                <!-- Item da lista de depoimentos -->
-                <div class="depoimento">
-                    <!-- Perfil da pessoa que fez o depoimento -->
-                    <div class="perfil-depoimento">
-                        <img class="imagem-depoimento" src="./images/thaynara-rudner-foto.jpg">
-                        <p class="nome-depoimento">Thaynara Rudner</p>
-                        <p class="instagram-depoimento">@thaynararudner</p>
-                    </div>
-                    <!-- O depoimento -->
-                    <p class="comentario-depoimento">Thaís, estou amando ler cada coisa que você deixa aqui. Enquanto estava lendo, me enxergava automaticamente em cada palavra. Admiro demais tua força e determinação. E é isso que estou buscando a cada dia.</p>
-                </div>
-                <div class="depoimento">
-                    <div class="perfil-depoimento">
-                        <img class="imagem-depoimento" src="images/nilsien-simas-foto.jpg">
-                        <p class="nome-depoimento">Nilsien Simas</p>
-                        <p class="instagram-depoimento">@nilsiensimas</p>
-                    </div>
-                    <p class="comentario-depoimento">Maravilhosa!!! Pode ter certeza que você fez parte da minha transformação enquanto profissional. Eu sou muito grata! Eu sei que aí tem muito propósito e carinho ❤️</p>
-                </div>
-                <div class="depoimento">
-                    <div class="perfil-depoimento">
-                        <img class="imagem-depoimento" src="images/exter-lira-foto.jpg">
-                        <p class="nome-depoimento">Ester Lira</p>
-                        <p class="instagram-depoimento">@ex.ter.lira</p>
-                    </div>
-                    <p class="comentario-depoimento">Foi perfeita a palestra!!! Até agora pensando em tudo o que rolou ontem, obrigada por compartilhar conosco a sua caminhanda ❤️</p>
-                </div>
-                <div class="depoimento">
-                    <div class="perfil-depoimento">
-                        <img class="imagem-depoimento" src="./images/adryelle-franca-foto.jpg">
-                        <p class="nome-depoimento">Adryelle Maria</p>
-                        <p class="instagram-depoimento">@adryellefranca</p>
-                    </div>
-                    <p class="comentario-depoimento">Pessoa maravilhosa!!!!! Já conhecia por ver ela no insta da agência mas conhecendo pessoalmente ela é uma fofa!!!!!! Gratidão pela palestra sua linda!!!!</p>
-                </div>
-                <div class="depoimento">
-                    <!-- Perfil da pessoa que fez o depoimento -->
-                    <div class="perfil-depoimento">
-                        <img class="imagem-depoimento" src="./images/gleyce-oliva-foto.jpg">
-                        <p class="nome-depoimento">Gleyce Oliva</p>
-                        <p class="instagram-depoimento">@gleyceoliva</p>
-                    </div>
-                    <!-- O depoimento -->
-                    <p class="comentario-depoimento">A partir daqui, desejo apenas que muito mais pessoas consigam ter a oportunidade de participar da PD SCHOOL pois pela minha própria experiência, essa, com certeza é, uma das decisões que mudam a vida!</p>
-                </div>
-                <div class="depoimento">
-                    <div class="perfil-depoimento">
-                        <img class="imagem-depoimento" src="./images/leandro-gomes-foto.jpg">
-                        <p class="nome-depoimento">Leandro Gomes</p>
-                        <p class="instagram-depoimento">@eujleandro</p>
-                    </div>
-                    <p class="comentario-depoimento">Muito obrigado pela oportunidade, pela experiência e por tudo que vocês da PD SCHOOL nos proporcionaram. Um ciclo se encerra, mas ficam as experiências que farão a diferença na nossa vida pessoal e profissional. ❤️👏</p>
-                </div>
-            </div>
-        </section>
-
-    </section>
-
-    <!--Texto com o sobre mim completo da cliente.-->
-    <section id="sobre-mim-texto-container" class="flex-container">
-        <!--Texto contendo algumas informações sobre o cliente-->
-        <section id="sobre-mim-texto" class="padrao-textos">
-            <h1>Sobre Mim</h1>
-            <p>Fiz várias coisas durante esses poucos anos de vida que tenho. Fui proprietária de loja, professora, vendedora, coordenadora, gerente… a verdade é que sempre me virei do jeito que dava porque não sabia bem o que queria. E como pra quem não sabe onde ir, qualquer caminho serve, andei por todos os lados. </p>
-            <p>Escutei meu coração e resolvi entrar em uma outra área. Conheci pessoas que viram potencial em mim e me deram oportunidade para trilhar uma trajetória na direção certa.</p>
-            <p>Me encontro, atualmente, em um caminho que tenho orgulho de falar sobre. Tenho uma empresa com mais dois sócios que se transformou num grupo - onde somos: agência de marketing, empresa de consultoria para negócios, escola, empresa de tecnologia e projeto social.</p>
-            <p>Além disso, gosto de dividir minha visão de mundo e compartilhar minha vida. Sou fã de leitura, apaixonada por café e trabalho todos os dias pra ser uma pessoa melhor pra mim mesma e para as pessoas que estão ao meu redor. Acredito em Deus e busco compreender a palavra pois a espiritualidade é uma esfera da vida que busco evoluir.</p>
-            <p>Prezo por uma rotina com significado e bons hábitos porque não quero deixar de lado os 5 anos que estudei na área de saúde. Então, sempre que tiver abertura para falar sobre saúde, estarei fazendo minha parte.</p>
-            <p>Hoje consigo ter clareza do meu propósito profissional e quero ajudar outras pessoas a encontrarem o seu. Vamos nessa?”</p>
-            <!--Informações sobre o instagram da cliente-->
-            <div id="imagem-container" class="flex-container">
-                <a href="https://www.instagram.com/thaismelopd/" target="_blank"><img src="images/foto-perfil.png" alt="Foto de perfil do instagram de Thaís" id="foto-perfil-insta"></a>
-                <div id="elementos-perfil">
-                    <span class="margin-bottom-zero" id="nome-thais">Thaís Melo</span>
-                    <a href="https://www.instagram.com/thaismelopd/" target="_blank"><span class="margin-bottom-zero" >@thaismelopd</span></a>
-                </div>
-            </div>
-        </section>
-    </section>
-    <!-- Section sobre o projeto -->
-    <section id="sobre-projeto-texto">
-        <h2>Sobre o Projeto</h2>
-    <!-- div que junta todos os paragrafos -->
-        <div id="paragrafos-sobre-projeto" class="padrao-textos">
-            <p>A mentoria é um ambiente para falarmos sobre: carreira, negócio, empreendedorismo, mentalidade… mas principalmente, sobre você.</p>
-            <p id="p2">A gente acaba ficando tão preocupado com o extraordinário que esquece das coisas ordinárias. O ser humano é o fator principal de tudo que conversamos aqui.</p>
-            <p>Meu principal objetivo é ajudar pessoas a encontrarem sentido em suas carreiras através do autoconhecimento. Faço isso pois o caminhas das pedras eu já trilhei. Me coloco como mentora desse processo pra que vocês não tenham que passar o tempo que passei pra descobrir o que realmente querem.</p>
-        </div>
-    </section>
     </main>
     <!-- Criação da classe rodape no footer -->
     <footer class="rodape">
         <!-- Criação da div 'separar1' para separar a classe 'contato e localização' -->
-        <div class="separar1"> 
+        <div class="separar1">
             <div class="contato">
                 <span><strong>Contato</strong></span>
                 <p>thaismelopd@gmail.com </p>
@@ -196,8 +233,10 @@
         <div class="separar2">
             <p>&copy; 2023 PD-Tech, Inc.</p>
             <ul class="icones-sociais">
-                <a href="https://www.instagram.com/thaismelopd/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/thaismelopd/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/thaismelopd/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/thaismelopd/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
             </ul>
         </div>
     </footer>
@@ -206,50 +245,67 @@
 
         <!-- Conteudo do Modal -->
         <div class="content">
-    
+
             <h1>Entre em Contato</h1>
-    
-            <form action="https://formsubmit.co/vini.nelso@gmail.com" method="POST" id="demo-modal" class="form">
+
+            <form action="https://formsubmit.co/thaismelopd@gmail.com" method="POST" id="demo-modal" class="form"
+                onsubmit="return submitUserForm();">
                 <!-- Input do Nome -->
                 <label for="name">Nome</label>
                 <input type="text" name="name" id="name" placeholder="Seu nome" required>
-    
+
                 <!-- Input do E-mail -->
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email" placeholder="seuemail@gmail.com" required>
-    
+
                 <!-- Input do Contato -->
                 <label for="contato">Telefone</label>
                 <input type="text" name="contato" id="contato" placeholder="(xx) xxxxx-xxxx" required>
-    
+
                 <!-- Input do Mensagem -->
-                <label for="mensage">Mensagem</label>
-                <textarea name="mensage" id="Mensagem" placeholder="Digite aqui sua Mensagem" required></textarea>
-    
-                <input type="hidden" name="_captcha" value="false">
-    
-                    <!-- Checkbox para termos de dados -->
-                    <div class="termos">
-                        <input type="checkbox" name="checkbox" class="checkbox" id="checkbox" required>
-                        <label for="checkbox" style="margin-bottom: 14px;">Concordo em enviar meus dados.</label>
-                    </div>
-    
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem" required></textarea>
+
+                <!--Recaptcha v2-->
+                <div class="g-recaptcha" data-sitekey="6Ld1b1YmAAAAAFrE-_Js9AxYf4TdFhJq9cntbO2V"
+                    data-callback="verifyCaptcha"></div>
+                <div id="g-recaptcha-error"></div>
+
                 <!-- Botão para enviar dados -->
-                <button type="submit" name="submit" value="submit">Enviar</button>
+                <button type="submit" name="submit" value="Submit">Enviar</button>
 
                 <!--X para fechar modal-->
-                <a href="#" id="X" class="modal__close" width="50px" >&times;</a>
+                <a href="#" id="X" class="modal__close" width="50px">&times;</a>
 
                 <input type="hidden" name="_subject" value="Nova Mensagem do site!">
 
                 <input type="hidden" name="_template" value="table">
+
+
             </form>
+            <script>
+                // Função pra verificar se o recaptcha tá marcado/completo 
+                function submitUserForm() {
+                    var response = grecaptcha.getResponse();
+                    if (response.length == 0) {
+                        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Por favor, complete a verificação.</span>';
+                        return false;
+                    }
+                    return true;
+                }
+
+                function verifyCaptcha() {
+                    document.getElementById('g-recaptcha-error').innerHTML = '';
+                }
+            </script>
+
         </div>
         <div id="container-loader">
             <div class="custom-loader"></div>
         </div>
     </div>
 
-    
+
 </body>
+
 </html>

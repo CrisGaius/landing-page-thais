@@ -998,3 +998,10 @@ div#container-loader {
         transform: rotate(.5turn)
     }
 }
+
+.g-recaptcha{
+
+    display: flex;
+    justify-content: center;
+
+}
