@@ -1,9 +1,11 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap'); /*Fonte Forum*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); /*Fonte Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+/*Fonte Forum*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/*Fonte Open Sans*/
 
 /* Declaração de variáveis para as fontes e cores da página */
-:root { 
+:root {
     --preto-acinzentado: #121211;
     --laranja: #EB5E28;
     --dourado: #F6BF73;
@@ -101,7 +103,9 @@ div#elementos a {
 }
 
 /* Estilização dos links da página que encontram-se no menu [ao passar o mouse] */
-div#elementos a:hover {text-decoration: underline;}
+div#elementos a:hover {
+    text-decoration: underline;
+}
 
 /* Estilização do botão do menu */
 div#elementos button#btn-contato {
@@ -123,8 +127,8 @@ div#elementos button#btn-contato:hover {
     transition: all 150ms ease-in-out;
 }
 
-/* Estilização da sessão com a imagem de thaís de fundo. */ 
-section#imagem { 
+/* Estilização da sessão com a imagem de thaís de fundo. */
+section#imagem {
     position: relative;
     text-align: center;
 }
@@ -140,10 +144,12 @@ section#imagem img {
 }
 
 /* Definindo position absolute para que os textos fiquem à frente da imagem */
-div#textos-imagem {position: absolute;}
+div#textos-imagem {
+    position: absolute;
+}
 
 /* Estilização da frase motivacional */
-div#textos-imagem h1{
+div#textos-imagem h1 {
     color: var(--dourado);
     font-size: 3em;
     font-weight: 700px;
@@ -179,7 +185,7 @@ div#textos-imagem p {
 /* Div que estiliza a imagem e e texto */
 div#container-sobremim {
     justify-content: flex-start;
-} 
+}
 
 /* Mexendo no h2 */
 .texto h2 {
@@ -190,7 +196,7 @@ div#container-sobremim {
 
 /* mexendo nos paragrafos */
 .texto {
-    display: flex; 
+    display: flex;
     font-size: 1.2em;
     flex-direction: column;
     width: 400px;
@@ -227,47 +233,52 @@ div#container-sobremim {
 /* Section que vai está a imagem e o texo */
 div#container-sobreprojeto {
     justify-content: space-between;
-} 
+}
 
 /* Estilização da seção de depoimentos */
 section#depoimentos-secao {
     position: relative;
+    padding: 100px 0;
     margin: 0 auto;
-    padding: 100px;
 }
 
 /* Estilização dos botôes do carousel */
 #depoimentos-secao .carousel-button {
     position: absolute;
-    top: calc(50% - 15px);
-    
+    top: calc(50% - 18px);
+
     cursor: pointer;
-    height: 30px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
     background-color: rgba(200, 200, 200, .5);
     color: rgba(0, 0, 0, .5);
-    font-size: 25px;
+    font-size: 30px;
     border: none;
     border-radius: 50%;
     transition: all 150ms ease-in-out;
 }
 
 #depoimentos-secao .carousel-button:hover {
-    top: calc(50% - 16px);
-    height: 32px;
-    width: 32px;
+    top: calc(50% - 20px);
+    height: 40px;
+    width: 40px;
     background-color: rgba(200, 200, 200, .9);
     color: var(--preto);
-    font-size: 27px;
+    font-size: 35px;
 }
 
 /* Posicionamento dos botões do carousel */
-#depoimentos-secao #anterior {left: 90px;}
+#depoimentos-secao #anterior {
+    left: 5%;
+}
 
-#depoimentos-secao #proximo {right: 90px;}
+#depoimentos-secao #proximo {
+    right: 5%;
+}
 
 /* Estilização da div onde estarão os depoimentos*/
 #depoimentos {
+    margin: 0 auto;
     width: 1000px;
     overflow: hidden;
     display: flex;
@@ -287,11 +298,17 @@ section#depoimentos-secao {
 }
 
 /* Colorização dos cards de depoimento */
-.depoimento:nth-child(3n + 1) {background-color: #F6BF73;}
+.depoimento:nth-child(3n + 1) {
+    background-color: #F6BF73;
+}
 
-.depoimento:nth-child(3n + 2) {background-color: #EBD2AC;}
+.depoimento:nth-child(3n + 2) {
+    background-color: #EBD2AC;
+}
 
-.depoimento:nth-child(3n + 3) {background-color: #FCF4DC;}
+.depoimento:nth-child(3n + 3) {
+    background-color: #FCF4DC;
+}
 
 /* Perfil da pessoa que depôs */
 .perfil-depoimento {
@@ -391,6 +408,7 @@ div#elementos-perfil {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 6px;
 }
 
 /*Estilização do nome da cliente*/
@@ -401,7 +419,7 @@ div#elementos-perfil span#nome-thais {
 }
 
 /* estilização do @ do instagram da cliente */
-span.margin-bottom-zero{
+span.margin-bottom-zero {
     color: #666666;
     font-size: 14px;
     font-weight: 500;
@@ -413,21 +431,26 @@ section#sobre-projeto-texto {
     color: #c4c4c4;
     text-align: center;
     padding: 20px;
+    padding-bottom: 80px;
     min-height: 470px;
 }
 
 /* estilizando titulo */
-section#sobre-projeto-texto h2{
+section#sobre-projeto-texto h2 {
     color: white;
     padding: 40px;
     font-size: 2.3rem;
 }
 
 /* colocando espaço no paragrafo de cima */
-section#sobre-projeto-texto #p2 {margin-top: 22px;}
+section#sobre-projeto-texto #p2 {
+    margin-top: 22px;
+}
 
 /* tamanho dos paragrafos */
-section#sobre-projeto-texto p {font-size: 1.1em;}
+section#sobre-projeto-texto p {
+    font-size: 1.1em;
+}
 
 /* tamanho da caixa de todos os textos */
 section#sobre-projeto-texto div#paragrafos-sobre-projeto {
@@ -436,7 +459,7 @@ section#sobre-projeto-texto div#paragrafos-sobre-projeto {
 }
 
 /*rodape*/
-.rodape{
+.rodape {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -444,7 +467,7 @@ section#sobre-projeto-texto div#paragrafos-sobre-projeto {
 }
 
 /*codigo para separar a primeira parte do rodape*/
-.separar1{
+.separar1 {
     display: flex;
     justify-content: space-between;
 }
@@ -455,18 +478,22 @@ section#sobre-projeto-texto div#paragrafos-sobre-projeto {
 }
 
 /*codigo para ajustar a parte do contato do rodape */
-div.contato{
+div.contato {
     width: 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 17px;
     padding: 10px 0px 10px 0px;
-    min-width:12vw;
+    min-width: 12vw;
+}
+
+div.contato p#telefone-contato {
+    width: 150px;
 }
 
 /*codigo para ajustar a parte da localização do rodape */
-div.localizacao{
+div.localizacao {
     width: 25px;
     display: flex;
     flex-direction: column;
@@ -474,23 +501,29 @@ div.localizacao{
     margin-right: 0vw;
     font-size: 17px;
     padding: 10px 0px 10px 0px;
-    min-width:25vw;
+    min-width: 25vw;
 }
 
 /*linha cinza que divide o rodape*/
-.linha-cinza{  border-bottom: 1px solid #ccc;}
+.linha-cinza {
+    border-bottom: 1px solid #ccc;
+}
 
 /*codigo para separar a segunda parte do rodape*/
-.separar2{
+.separar2 {
     display: flex;
     justify-content: space-between;
 }
 
 /* codigo para retirar a cor azul do link */
-.icones-sociais a { color: inherit; }
+.icones-sociais a {
+    color: inherit;
+}
 
 /* codigo para separar os icones do intagram e do linkedin */
-.icones-sociais a:nth-child(1) {margin-right: 5px;}
+.icones-sociais a:nth-child(1) {
+    margin-right: 5px;
+}
 
 /* MODAL */
 /*Animação do modal*/
@@ -502,27 +535,27 @@ div.localizacao{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 5;
-  }
-  
+}
+
 /*Animação do modal*/
 
-  #fade,
-  .modal {
+#fade,
+.modal {
     transition: 0.5s;
     opacity: 1;
     pointer-events: all;
-  }
+}
 
-  /*Escondendo modal*/
+/*Escondendo modal*/
 
-  .modal.hide,
-  #fade.hide {
+.modal.hide,
+#fade.hide {
     opacity: 0;
     pointer-events: none;
-  }
+}
 
-  /* Texto do Modal */
-.termos{
+/* Texto do Modal */
+.termos {
     width: 100%;
     margin-right: 50px;
     z-index: 100;
@@ -532,7 +565,7 @@ div.localizacao{
 
 
 /* CheckBox do Modal */
-.checkbox{
+.checkbox {
     min-width: 20px;
     min-height: 20px;
     margin-left: 60px;
@@ -555,8 +588,8 @@ div.localizacao{
     margin: auto;
 }
 
-/* Titulo do Modal */  
-.modal h1{
+/* Titulo do Modal */
+.modal h1 {
     font-size: 48px;
     color: #fff;
     margin-bottom: -70px;
@@ -573,23 +606,27 @@ div.localizacao{
     font-size: 1.125rem;
     transform: scale(.7);
 }
-  
+
 /* Tamanho dos inputs do Formulario */
-.form label, .form input, .form textarea, .form button {
+.form label,
+.form input,
+.form textarea,
+.form button {
     display: block;
     width: 100%;
 }
- 
+
 /* Tamanho dos textos do Formulario */
 .form label {
     color: #fff;
     line-height: 1;
     margin-bottom: 0.5rem;
-    
+
 }
-  
+
 /* Tamanhos dos inputs do Formulario 2.0 */
-.form input, .form textarea {
+.form input,
+.form textarea {
     font: inherit;
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -603,9 +640,12 @@ div.localizacao{
     min-height: 13rem;
     resize: vertical;
 }
- 
+
 /* Bordas apos passar o muse por cima dos inputs */
-.form  input:hover, .form input:focus, .form textarea:hover, .form textarea:focus {
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus {
     outline: none;
     border-color: #F4AC48;
     box-shadow: 0 0 0 3px #FFD599;
@@ -615,7 +655,7 @@ div.localizacao{
 .termos .checkbox {
     width: 10px;
 }
-  
+
 /* Estilização do botão de enviar */
 .form button {
     display: block;
@@ -630,9 +670,10 @@ div.localizacao{
     cursor: pointer;
     transition: 0.2s;
 }
-  
+
 /* Animação do botão apos passar o mouse */
-.form button:hover, .form button:focus {
+.form button:hover,
+.form button:focus {
     outline: none;
     background: #FFD599;
 }
@@ -658,7 +699,7 @@ div.localizacao{
         text-align: center;
         max-width: 300px;
     }
-    
+
     div#elementos {
         gap: 10px;
     }
@@ -754,7 +795,8 @@ div.localizacao{
         max-width: 300px
     }
 
-    div.contato, div.localizacao {
+    div.contato,
+    div.localizacao {
         font-size: .9em;
     }
 
@@ -768,7 +810,8 @@ div.localizacao{
 }
 
 /* Media query para ajustar as propriedades vistas anteriormente para telas intermediárias*/
-@media screen and (min-width: 621px) and (max-width: 750px) { /*601PX */
+@media screen and (min-width: 621px) and (max-width: 750px) {
+    /*601PX */
 
     div#textos-imagem h1 {
         font-size: 1.9em;
@@ -779,7 +822,7 @@ div.localizacao{
         max-width: 500px;
         font-size: .9em;
     }
-    
+
     .container img {
         max-width: 210px;
     }
@@ -791,7 +834,7 @@ div.localizacao{
         max-width: 400px;
         gap: 30px;
     }
-    
+
     .secao {
         margin: 0 auto;
         padding: 0;
@@ -811,6 +854,10 @@ div.localizacao{
     .depoimento {
         min-width: 250px;
         max-width: 250px;
+    }
+
+    .nome-depoimento {
+        font-size: 16px;
     }
 
     .texto h2 {
@@ -839,7 +886,7 @@ div.localizacao{
 
 /* Media query para ajustar as propriedades vistas anteriormente para tablets*/
 @media screen and (min-width: 751px) and (max-width: 1100px) {
-     div#textos-imagem h1 {
+    div#textos-imagem h1 {
         font-size: 2.1em;
         padding: 0 10px;
     }
@@ -848,7 +895,7 @@ div.localizacao{
         max-width: 500px;
         font-size: .9em;
     }
-    
+
     .container img {
         max-width: 310px;
     }
@@ -861,7 +908,7 @@ div.localizacao{
         max-width: 600px;
         gap: 50px;
     }
-    
+
     .secao {
         margin: 0 auto;
         padding: 0;
@@ -888,9 +935,18 @@ div.localizacao{
         gap: 20px;
     }
 
+    .perfil-depoimento {
+        grid-template-rows: 17px 16px;
+        gap: 7px;
+    }
+
     .depoimento {
         min-width: 220px;
         max-width: 220px;
+    }
+
+    .nome-depoimento {
+        font-size: 15px;
     }
 
     .texto h2 {
@@ -931,9 +987,14 @@ div#container-loader {
 .custom-loader {
     width: 70px;
     height: 70px;
-    border-radius:50%;
-    border:8px solid;
-    border-color:#8d7048 #0000;
-    animation:s1 0.5s infinite;
-  }
-  @keyframes s1 {to{transform: rotate(.5turn)}}
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: #8d7048 #0000;
+    animation: s1 0.5s infinite;
+}
+
+@keyframes s1 {
+    to {
+        transform: rotate(.5turn)
+    }
+}

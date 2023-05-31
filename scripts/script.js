@@ -1,10 +1,10 @@
 // Seleção da imagem principal
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 750) {
   document.querySelector('.desktop').style.display = 'none';
   document.querySelector('.mobile').style.display = 'block';
 }
 window.addEventListener('resize', () => {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 750) {
     document.querySelector('.desktop').style.display = 'none';
     document.querySelector('.mobile').style.display = 'block';
   } else {
@@ -14,7 +14,7 @@ window.addEventListener('resize', () => {
 })
 
 // Index do item do meio atual
-let currentIndex = window.innerWidth <= 768? 0 : 1;
+let currentIndex = window.innerWidth <= 750? 0 : 1;
 
 // Evento dos botões do carousel
 document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('click', () => {
@@ -29,14 +29,14 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
   
   // Garantindo que o index não saia do range válido
   // OBS: Com telas maiores, sempre haverão ter três cards na tela, ou seja, o 1o e o último nunca estrão no meio
-  if (window.innerWidth < 768) {
+  if (window.innerWidth <= 750) {
     if (currentIndex < 0) {
       currentIndex = listaDeCards.length - 1;
-    } else if (currentIndex > listaDeCards.length -1) {
+    } else if (currentIndex > listaDeCards.length - 1) {
       currentIndex = 0;
     }
-    } else {
-    if (currentIndex < 2) {
+  } else {
+    if (currentIndex < 1) {
       currentIndex = listaDeCards.length - 2;
     } else if (currentIndex > listaDeCards.length - 2) {
       currentIndex = 1;
