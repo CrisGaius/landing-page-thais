@@ -186,12 +186,14 @@
                     seu. Vamos nessa?”</p>
                 <!--Informações sobre o instagram da cliente-->
                 <div id="imagem-container" class="flex-container">
-                    <a href="https://www.instagram.com/thaismelopd/" target="_blank"><img src="images/foto-perfil.png"
-                            alt="Foto de perfil do instagram de Thaís" id="foto-perfil-insta"></a>
+                    <a href="https://www.instagram.com/thaismelopd/" target="_blank"><abbr title="@thaismelopd">
+                        <img src="images/foto-perfil.png"
+                                alt="Foto de perfil do instagram de Thaís" id="foto-perfil-insta">
+                    </abbr></a>
                     <div id="elementos-perfil">
                         <span class="margin-bottom-zero" id="nome-thais">Thaís Melo</span>
                         <a href="https://www.instagram.com/thaismelopd/" target="_blank"><span
-                                class="margin-bottom-zero">@thaismelopd</span></a>
+                                class="margin-bottom-zero"><abbr title="@thaismelopd">@thaismelopd</abbr></span></a>
                     </div>
                 </div>
             </section>
@@ -248,9 +250,9 @@
 
             <h1>Entre em Contato</h1>
             
+            <!-- Modal FormSubmit -->
             
-            
-            <form action="https://formsubmit.co/kakas46505@vaband.com" method="POST" id="demo-modal" class="form"
+            <form action="https://formsubmit.co/435a75c61a7198bfbef072c45c9bf24c" method="POST" id="demo-modal" class="form"
                 onsubmit="return submitUserForm();">
                 <!-- Input do Nome -->
                 <label for="name">Nome</label>
@@ -262,39 +264,40 @@
 
                 <!-- Input do Contato -->
                 <label for="contato">Telefone</label>
-                <input type="text" name="contato" id="contato" placeholder="(xx) xxxxx-xxxx" required>
+                <input type="text" name="contato" id="contato" placeholder="Ex: 81976349589" required pattern="(\([0-9]{2}\)\s?[0-9]{4,5}-?[0-9]{3,4})|([0-9]{10,11})|([0-9]{2}\s?[0-9]{8,9})" title="Faça segundo o exemplo: 81976349589" minlength="11" maxlength="11">
                 
                 <!-- Input do Mensagem -->
                 <label for="mensagem">Mensagem</label>
                 <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem" required></textarea>
-
-                <!--Recaptcha v2
-                    <div class="g-recaptcha" data-sitekey="6Ld1b1YmAAAAAFrE-_Js9AxYf4TdFhJq9cntbO2V"
-                    data-callback="verifyCaptcha"></div>
-                    <div id="g-recaptcha-error"></div> -->
-                    
-                    <!-- Checkbox para termos de dados -->
-                    
-                    <!--X para fechar modal-->
+                                        
+                <!--X para fechar modal-->
                 <a href="#" id="X" class="modal__close" width="50px">&times;</a>
                 
+                <!-- Elementos do FormSubmit -->
+
+                <!--assunto que aparece quando o email é enviado-->
                 <input type="hidden" name="_subject" value="Nova Mensagem do site!">
                 
+                <!--Escolha da template de tabela oferecida pelo form submit-->
                 <input type="hidden" name="_template" value="table">
                 
+                <!--Tirando o captcha feito pelo form submit-->
                 <input type="hidden" name="_captcha" value="false">
 
-                <input type="hidden" name="_next" value="https://crisgaius.github.io/landing-page-thais/index.html">
+                <!--Ao enviar o formulário, enviar de volta para a página principal-->
+                <input type="hidden" name="_next" value="thaismelopd.com/index.html">
                 
+                <!-- Checkbox para termos e condições -->
                 <div class="termos">
                     <div id="caixa-checkbox">
                         <input type="checkbox" name="checkbox" class="checkbox" id="checkbox" required>
-                        <label for="checkbox">Concordo em enviar meus dados.</label>
+                        <label for="checkbox">Concordo e aceito os <a href="politica-privacidade/privacidade.html" id="politica" target="_blank">Termos e Condições</a></label> 
                     </div>
                 </div>
                 
             </form>
-            
+
+            <!-- reCAPTCHA -->
             <div class="confirmacoes">
                 <section id="recaptcha">
                     <div class="g-recaptcha" data-sitekey="6Ld1b1YmAAAAAFrE-_Js9AxYf4TdFhJq9cntbO2V"
@@ -306,54 +309,11 @@
                 <button type="submit"
                 form="demo-modal" name="submit" id="submit" value="Submit">Enviar</button>
             </div>
-            
-              
-            <script>
-                // Função pra verificar se o recaptcha tá marcado/completo 
-                function submitUserForm() {
-                    var response = grecaptcha.getResponse();
-                    if (response.length == 0) {
-                        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Por favor, complete a verificação.</span>';
-                        return false;
-                    } else {
-                        var botaoConfirmarModal = document.getElementsByName('submit')[0]
-
-                        var inputNome = document.getElementById('name').value
-                        var inputEmail = document.getElementById('email').value
-                        var inputTelefone = document.getElementById('contato').value
-                        var inputMensagem = document.getElementById('mensagem').value
-                        var checkbox = document.getElementById('checkbox')
-
-                        var loader = document.getElementById('container-loader')
-                        var recaptcha = document.getElementsByClassName('g-recaptcha')[0]
-                         
-
-                        if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
-
-                            if (inputEmail.includes('@') && inputEmail.length > 3) {
-                                loader.style.display = 'block'
-                            } 
-                        } else {
-                            console.log('erro!')
-                        }
-
-                        return true;
-                    }
-
-                }
-
-                function verifyCaptcha() {
-                    document.getElementById('g-recaptcha-error').innerHTML = '';
-                }
-            </script>
-
         
+        <!-- Loader do Modal -->
         <div id="container-loader">
             <div class="custom-loader"></div>
         </div>
     </div>
-
-
 </body>
-
 </html>

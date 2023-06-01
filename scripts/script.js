@@ -43,7 +43,7 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
     }
   }
 
-  // Movendo os cards para que o card do index esteja no meio
+// Movendo os cards para que o card do index esteja no meio
   listaDeCards[currentIndex].scrollIntoView({
     inline: 'center',
     block: 'nearest',
@@ -51,25 +51,7 @@ document.querySelectorAll('.carousel-button').forEach(e => e.addEventListener('c
   });
 }));
 
-// // Abrindo Modal
-// const botao = document.getElementById('btn-contato'); // pegando o botão do site que vai abrir o modal
-// const modal = document.getElementsByClassName('modal')[0]; //pegando o modal completo
-// let conteudo = document.getElementsByClassName('content')[0]; //pegando o conteúdo do modal
-// const x = document.getElementById('X');
-
-// //Ao clicar no botão
-// botao.addEventListener('click', function abrirModal() { 
-//     modal.style.display = 'flex'; // modal irá aparecer
-//     conteudo = document.getElementsByClassName('content')[0];
-// })
-
-// const fechar = document.getElementsByClassName('modal__close')[0]; //pegar o "X" que fecha o modal
-
-// //ao clicar no X que fecha o botão
-// fechar.addEventListener('click', function fecharModal () {
-//     modal.style.display = 'none'; //fazemos o modal completo desaparecer
-//     conteudo.classList.toggle('animar')
-// });
+// Abrindo o modal
 
 const openModalButton = document.querySelector("#btn-contato");
 const closeModalButton = document.querySelector(".modal__close");
@@ -85,26 +67,38 @@ const toggleModal = () => {
   el.addEventListener("click", () => toggleModal());
 });
 
-// var botaoConfirmarModal = document.getElementsByName('submit')[0]
+// Verificando o Formulario
 
-// var loader = document.getElementById('container-loader')
+function submitUserForm() {
+  var response = grecaptcha.getResponse();
+  if (response.length == 0) {
+      document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Por favor, complete a verificação.</span>';
+      return false;
+  } else {
+      var botaoConfirmarModal = document.getElementsByName('submit')[0]
 
-// botaoConfirmarModal.addEventListener('click', () => {
-//   var inputNome = document.getElementById('name').value
-//   var inputEmail = document.getElementById('email').value
-//   var inputTelefone = document.getElementById('contato').value
-//   var inputMensagem = document.getElementById('mensagem').value
-//   var checkbox = document.getElementById('checkbox')
+      var inputNome = document.getElementById('name').value
+      var inputEmail = document.getElementById('email').value
+      var inputTelefone = document.getElementById('contato').value
+      var inputMensagem = document.getElementById('mensagem').value
+      var checkbox = document.getElementById('checkbox')
 
-//   if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
+      var loader = document.getElementById('container-loader')
+      var recaptcha = document.getElementsByClassName('g-recaptcha')[0]
+       
 
-//     if (inputEmail.includes('@') && inputEmail.length > 3) {
-//       loader.style.display = 'block'
-//     } else {
-//       console.log('erro!')
-//     }
+      if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
+            loader.style.display = 'block'
+      }
 
-//   }
+      return true;
+  }
 
-// })
+
+}
+
+// Verificando o reCAPTCHA
+function verifyCaptcha() {
+  document.getElementById('g-recaptcha-error').innerHTML = '';
+}
 

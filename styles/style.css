@@ -572,11 +572,10 @@ div.localizacao {
     z-index: 50;
     width: 433px;
     margin: auto;
+    height: 730px;
+
 }
 
-.modal {
-    height: 730px;
-}
 
 /* Titulo do Modal */
 .modal h1 {
@@ -644,7 +643,7 @@ div.termos input:focus {
     box-shadow: 0 0 0 3px #FFD599;
 }
 
-/* Texto do Modal */
+/* Termos do Modal */
 .termos {
     align-items: center;
     display: flex;
@@ -653,13 +652,14 @@ div.termos input:focus {
     text-align: center;
 }
 
+/* Estilização da caixa do checkbox */
 div#caixa-checkbox {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* CheckBox do Modal */
+/* input do checkbox do Modal */
 input#checkbox {
     width: 25px;
     height: 25px;
@@ -667,32 +667,42 @@ input#checkbox {
     padding: 0;
 }
 
+/* etiqueta do input do checkbox */
 label[for="checkbox"] {
     margin-top: 8px;
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
+/* estilização do link que contém a política de privacidade */
+a#politica {
+    text-decoration: none;
+    color: var(--dourado);
+}
+
+/* reCAPTCHA */
 .g-recaptcha {
     display: flex;
     justify-content: center;
 }
 
+/*Estilização da seção que contém a caixa do recaptcha*/
 section#recaptcha {
     margin-left: 4px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    text-align: center;
 }
 
 
-/* Estilização do botão de enviar */
+/* Estilizacao do botao de enviar */
 button#submit {
     display: block;
     margin-left: 3px;
     padding: 10px;
-    background: #121211;
+    background: #ecab51;
     color: #fff;
     font: inherit;
     text-transform: uppercase;
@@ -707,10 +717,10 @@ button#submit {
 button#submit:hover,
 button#submit:focus {
     outline: none;
-    background: #FFD599;
+    background: #ffb54d;
 }
 
-/* Botão de fechar o modal "X" */
+/* Botao de fechar o modal "X" */
 .modal__close {
     position: absolute;
     scale: 3.5;
@@ -720,18 +730,7 @@ button#submit:focus {
     text-decoration: none;
 }
 
-section#testando {
-    /* text-align: center;
-    margin: auto;
-    margin-bottom: 10px;
-    padding-left: 0.5px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2px;
-    margin-bottom: 10px;
-}
-
+/* Posicao do reCAPTCHA */
 .confirmacoes {
     margin-top: -75px;
     display: flex;
@@ -1061,7 +1060,7 @@ section#testando {
 
 }
 
-/* BLA-BLA-BLA TO COM SONO */
+/* Posicao do Loader do Modal */
 div#container-loader {
     display: none;
     position: fixed;
@@ -1071,6 +1070,7 @@ div#container-loader {
     transform: translate(-50%, -50%);
 }
 
+/* Estilizacao do Loader */
 .custom-loader {
     width: 70px;
     height: 70px;
@@ -1080,6 +1080,7 @@ div#container-loader {
     animation: s1 0.5s infinite;
 }
 
+/* Animacao doo Loader */
 @keyframes s1 {
     to {
         transform: rotate(.5turn)
