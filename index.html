@@ -244,10 +244,12 @@
     <div id="btn-contato" class="modal hide">
 
         <!-- Conteudo do Modal -->
-        <div class="content">
+
 
             <h1>Entre em Contato</h1>
-
+            
+            
+            
             <form action="https://formsubmit.co/kakas46505@vaband.com" method="POST" id="demo-modal" class="form"
                 onsubmit="return submitUserForm();">
                 <!-- Input do Nome -->
@@ -261,34 +263,51 @@
                 <!-- Input do Contato -->
                 <label for="contato">Telefone</label>
                 <input type="text" name="contato" id="contato" placeholder="(xx) xxxxx-xxxx" required>
-
+                
                 <!-- Input do Mensagem -->
                 <label for="mensagem">Mensagem</label>
                 <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem" required></textarea>
 
-                <!--Recaptcha v2-->
-                <div class="g-recaptcha" data-sitekey="6Ld1b1YmAAAAAFrE-_Js9AxYf4TdFhJq9cntbO2V"
+                <!--Recaptcha v2
+                    <div class="g-recaptcha" data-sitekey="6Ld1b1YmAAAAAFrE-_Js9AxYf4TdFhJq9cntbO2V"
                     data-callback="verifyCaptcha"></div>
-                <div id="g-recaptcha-error"></div>
-
-                <!-- Checkbox para termos de dados -->
-                <div class="termos">
-                    <input type="checkbox" name="checkbox" class="checkbox" id="checkbox" required>
-                    <label for="checkbox" style="margin-bottom: 14px;">Concordo em enviar meus dados.</label>
-                </div>
-
-                <!-- Botão para enviar dados -->
-                <button type="submit" name="submit" value="Submit">Enviar</button>
-
-                <!--X para fechar modal-->
+                    <div id="g-recaptcha-error"></div> -->
+                    
+                    <!-- Checkbox para termos de dados -->
+                    
+                    <!--X para fechar modal-->
                 <a href="#" id="X" class="modal__close" width="50px">&times;</a>
-
+                
                 <input type="hidden" name="_subject" value="Nova Mensagem do site!">
-
+                
                 <input type="hidden" name="_template" value="table">
+                
+                <input type="hidden" name="_captcha" value="false">
 
-
+                <input type="hidden" name="_next" value="https://crisgaius.github.io/landing-page-thais/index.html">
+                
+                <div class="termos">
+                    <div id="caixa-checkbox">
+                        <input type="checkbox" name="checkbox" class="checkbox" id="checkbox" required>
+                        <label for="checkbox">Concordo em enviar meus dados.</label>
+                    </div>
+                </div>
+                
             </form>
+            
+            <div class="confirmacoes">
+                <section id="recaptcha">
+                    <div class="g-recaptcha" data-sitekey="6Ld1b1YmAAAAAFrE-_Js9AxYf4TdFhJq9cntbO2V"
+                    data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div>
+                </section>
+                
+                <!-- Botão para enviar dados -->
+                <button type="submit"
+                form="demo-modal" name="submit" id="submit" value="Submit">Enviar</button>
+            </div>
+            
+              
             <script>
                 // Função pra verificar se o recaptcha tá marcado/completo 
                 function submitUserForm() {
@@ -297,23 +316,30 @@
                         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Por favor, complete a verificação.</span>';
                         return false;
                     } else {
+                        var botaoConfirmarModal = document.getElementsByName('submit')[0]
+
                         var inputNome = document.getElementById('name').value
                         var inputEmail = document.getElementById('email').value
                         var inputTelefone = document.getElementById('contato').value
-                        var inputMensagem = document.getElementById('Mensagem').value
+                        var inputMensagem = document.getElementById('mensagem').value
                         var checkbox = document.getElementById('checkbox')
 
                         var loader = document.getElementById('container-loader')
+                        var recaptcha = document.getElementsByClassName('g-recaptcha')[0]
+                         
 
                         if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
 
-                            if (inputEmail.includes('@.') && inputEmail.length > 3) {
+                            if (inputEmail.includes('@') && inputEmail.length > 3) {
                                 loader.style.display = 'block'
-                            }
+                            } 
+                        } else {
+                            console.log('erro!')
                         }
+
+                        return true;
                     }
 
-                    return true;
                 }
 
                 function verifyCaptcha() {
@@ -321,7 +347,7 @@
                 }
             </script>
 
-        </div>
+        
         <div id="container-loader">
             <div class="custom-loader"></div>
         </div>

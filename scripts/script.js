@@ -93,13 +93,15 @@ const toggleModal = () => {
 //   var inputNome = document.getElementById('name').value
 //   var inputEmail = document.getElementById('email').value
 //   var inputTelefone = document.getElementById('contato').value
-//   var inputMensagem = document.getElementById('Mensagem').value
+//   var inputMensagem = document.getElementById('mensagem').value
 //   var checkbox = document.getElementById('checkbox')
 
 //   if (inputNome && inputEmail && inputTelefone && inputMensagem && checkbox.checked) {
 
 //     if (inputEmail.includes('@') && inputEmail.length > 3) {
 //       loader.style.display = 'block'
+//     } else {
+//       console.log('erro!')
 //     }
 
 //   }
