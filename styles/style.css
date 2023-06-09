@@ -231,7 +231,7 @@ div#container-sobremim {
 
 /* Ínicio SOBRE PROJETO*/
 /* Section que vai está a imagem e o texo */
-div#container-sobreprojeto {
+div#sobre-a-mentoria {
     justify-content: space-between;
 }
 
@@ -427,7 +427,7 @@ span.margin-bottom-zero {
 }
 
 /* Sobre o Projeto Texto */
-section#sobre-projeto-texto {
+section#sobre-a-mentoria-texto {
     color: #c4c4c4;
     text-align: center;
     padding: 20px;
@@ -436,24 +436,24 @@ section#sobre-projeto-texto {
 }
 
 /* estilizando titulo */
-section#sobre-projeto-texto h2 {
+section#sobre-a-mentoria-texto h2 {
     color: white;
     padding: 40px;
     font-size: 2.3rem;
 }
 
 /* colocando espaço no paragrafo de cima */
-section#sobre-projeto-texto #p2 {
+section#sobre-a-mentoria-texto #p2 {
     margin-top: 22px;
 }
 
 /* tamanho dos paragrafos */
-section#sobre-projeto-texto p {
+section#sobre-a-mentoria-texto p {
     font-size: 1.1em;
 }
 
 /* tamanho da caixa de todos os textos */
-section#sobre-projeto-texto div#paragrafos-sobre-projeto {
+section#sobre-a-mentoria-texto div#paragrafos-sobre-projeto {
     max-width: 720px;
     margin: auto;
 }
@@ -803,7 +803,7 @@ button#submit:focus {
         max-width: 180px;
     }
 
-    div#container-sobreprojeto {
+    div#sobre-a-mentoria {
         justify-content: flex-start;
     }
 
@@ -950,11 +950,11 @@ button#submit:focus {
         min-width: 200px;
     }
 
-    #container-sobreprojeto {
+    #sobre-a-mentoria {
         justify-content: space-between;
     }
 
-    #container-sobreprojeto .texto {
+    #sobre-a-mentoria .texto {
         min-width: 200px;
     }
 
@@ -1039,11 +1039,11 @@ button#submit:focus {
         min-width: 200px;
     }
 
-    #container-sobreprojeto {
+    #sobre-a-mentoria {
         justify-content: center;
     }
 
-    #container-sobreprojeto .texto {
+    #sobre-a-mentoria .texto {
         min-width: 250px;
     }
 
