@@ -61,6 +61,14 @@ const fade = document.querySelector("#fade");
 const toggleModal = () => {
   modal.classList.toggle("hide");
   fade.classList.toggle("hide");
+  if (!modal.classList.contains('hide')) {
+    document.querySelector('#name').focus();
+  } else {
+    document.querySelector('#name').blur();
+    document.querySelector('#email').blur();
+    document.querySelector('#contato').blur();
+    document.querySelector('#mensagem').blur();
+  }
 };
 
 [openModalButton, closeModalButton, fade].forEach((el) => {
