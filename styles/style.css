@@ -57,31 +57,6 @@ nav#navbar a#titulo-menu {
     font-size: 1.3em;
 }
 
-/* Projeto de animação ao passar por cima do nome da cliente */
-nav#navbar a.gradiente:hover {
-    color: #DD01E3;
-    animation: bg 3s infinite;
-}
-
-/* animação na logo da cliente para aparecerem as cores do instagram */
-@keyframes bg {
-    0% {
-        color: #DD01E3;
-    }
-
-    50% {
-        color: #FE0076;
-    }
-
-    75% {
-        color: #FFC23B;
-    }
-
-    100% {
-        color: #DD01E3;
-    }
-}
-
 /* Estilização dos elementos da página que encontram-se no menu */
 div#elementos {
     display: flex;
